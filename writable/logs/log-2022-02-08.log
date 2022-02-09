@@ -1,0 +1,149 @@
+CRITICAL - 2022-02-08 14:00:38 --> Invalid file: auth/register.php
+#0 D:\xampp\htdocs\RanjenWEB\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('auth/register.p...')
+#1 D:\xampp\htdocs\RanjenWEB\system\Common.php(1089): CodeIgniter\View\View->render('auth/register', Array, true)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(30): view('auth/register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-02-08 14:09:13 --> syntax error, unexpected variable "$user_created_at"
+#0 D:\xampp\htdocs\RanjenWEB\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\RanjenWEB\system\Common.php(1089): CodeIgniter\View\View->render('auth/login', Array, true)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(24): view('auth/login')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->login()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-02-08 14:16:23 --> syntax error, unexpected token ";"
+#0 D:\xampp\htdocs\RanjenWEB\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('auth/register')
+#1 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('auth/register')
+#2 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-02-08 14:17:17 --> register is not a validation rules group.
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(543): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound('register')
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(116): CodeIgniter\Validation\Validation->loadRuleGroup('register')
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-02-08 14:19:30 --> register is not a validation rules group.
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(543): CodeIgniter\Validation\Exceptions\ValidationException::forGroupNotFound('register')
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(116): CodeIgniter\Validation\Validation->loadRuleGroup('register')
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:23:10 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:23:10 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('zidanemagaba', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'zidanemagaba', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:27:48 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:27:48 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('zidanemagaba', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'zidanemagaba', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:36:32 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:36:32 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('nomina', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'nomina', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:38:36 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:38:36 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('nomina', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'nomina', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:38:50 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:38:50 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('asd', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'asd', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:41:42 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:41:42 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('asd', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'asd', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:41:58 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:41:58 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('asd', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'asd', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:42:32 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:42:32 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('asd', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'asd', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 14:42:51 --> Table 'jti_bbmranrolog.user' doesn't exist
+CRITICAL - 2022-02-08 14:42:51 --> Call to a member function getRow() on bool
+#0 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(292): CodeIgniter\Validation\Rules->is_unique('asdada', 'user_nama', Array, NULL)
+#1 D:\xampp\htdocs\RanjenWEB\system\Validation\Validation.php(157): CodeIgniter\Validation\Validation->processRules('user_nama', 'user_nama', 'asdada', Array, Array)
+#2 D:\xampp\htdocs\RanjenWEB\app\Controllers\Auth.php(39): CodeIgniter\Validation\Validation->run(Array, 'register')
+#3 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(825): App\Controllers\Auth->valid_register()
+#4 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\RanjenWEB\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\RanjenWEB\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\RanjenWEB\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-08 15:48:35 --> Unknown column 'updated_at' in 'field list'
+ERROR - 2022-02-08 15:50:56 --> Unknown column 'updated_at' in 'field list'
