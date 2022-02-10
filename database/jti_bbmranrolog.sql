@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2022 at 02:10 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Feb 10, 2022 at 11:35 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -89,8 +89,17 @@ CREATE TABLE `kendaraan` (
   `ran_spbu` varchar(255) NOT NULL,
   `ran_deleted` varchar(255) NOT NULL,
   `ran_deleted_by` varchar(255) NOT NULL,
-  `ran_deleted_tgl` datetime(3) NOT NULL
+  `ran_deleted_tgl` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `kendaraan`
+--
+
+INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran_tipe`, `ran_satker`, `ran_kondisi`, `ran_wilayah`, `ran_liter`, `ran_bbm_isi`, `ran_spbu`, `ran_deleted`, `ran_deleted_by`, `ran_deleted_tgl`) VALUES
+(3, 'HIV-1', '2', '2', '3', '6', '', '5', '512', '20', '1', '', '', NULL),
+(4, 'SDADSADSADAS', '1', '1', '2', '19', '', '1', '36262', '15', '15', '', '', NULL),
+(5, 'SADSADSADSADASDA', '2', '2', '3', '21', '', '3', '333', '17', '15', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -644,7 +653,7 @@ ALTER TABLE `kartu_trxs`
 -- AUTO_INCREMENT for table `kendaraan`
 --
 ALTER TABLE `kendaraan`
-  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT;
+  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `log_aktifitas`

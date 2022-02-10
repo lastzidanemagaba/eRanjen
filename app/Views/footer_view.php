@@ -35,6 +35,14 @@
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+
+    
+
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>
     <script>
@@ -76,47 +84,39 @@
         // get Edit Kartu
         $(document).on('click', '.btn-edit', function(){
             // get data from button edit
-            const id = $(this).data('id');
-            const nopol = $(this).data('nopol');
-            const jenis_bbm = $(this).data('jenis_bbm');
-            const ranjen = $(this).data('ranjen');
-            const tipe_kendaraan = $(this).data('tipe_kendaraan');
-            const keterangan = $(this).data('keterangan');
-            const satker = $(this).data('satker');
-            const wilayah_tugas = $(this).data('wilayah_tugas');
-            const kondisi = $(this).data('kondisi');
-            const jumlah_liter = $(this).data('jumlah_liter');
-            const tempat_pengisian_bbm = $(this).data('tempat_pengisian_bbm');
-            const spbu = $(this).data('spbu');
-            const wilayah_spbu = $(this).data('wilayah_spbu');
-            const kode_spbu = $(this).data('kode_spbu');
+            const ran_id = $(this).data('ran_id');
+            const ran_nopol = $(this).data('ran_nopol');
+            const ran_bbm_jenis = $(this).data('ran_bbm_jenis');
+            const ran_jen = $(this).data('ran_jen');
+            const ran_tipe = $(this).data('ran_tipe');
+            const ran_satker = $(this).data('ran_satker');
+            const ran_wilayah = $(this).data('ran_wilayah');
+            const ran_liter = $(this).data('ran_liter');
+            const ran_bbm_isi = $(this).data('ran_bbm_isi');
+            const ran_spbu = $(this).data('ran_spbu');
             // Set data to Form Edit
-            $('.id').val(id);
-            $('.nopol').val(nopol);
-            $('.jenis_bbm').val(jenis_bbm).trigger('change');
-            $('.ranjen').val(ranjen).trigger('change');
-            $('.tipe_kendaraan').val(tipe_kendaraan).trigger('change');
-            $('.keterangan').val(keterangan);
-            $('.satker').val(satker).trigger('change');
-            $('.wilayah_tugas').val(wilayah_tugas).trigger('change');
-            $('.kondisi').val(kondisi).trigger('change');
-            $('.jumlah_liter').val(jumlah_liter).trigger('change');
-            $('.tempat_pengisian_bbm').val(tempat_pengisian_bbm).trigger('change');
-            $('.spbu').val(spbu).trigger('change');
-            $('.wilayah_spbu').val(wilayah_spbu).trigger('change');
-            $('.kode_spbu').val(kode_spbu);
+            $('.ran_id').val(ran_id);
+            $('.ran_nopol').val(ran_nopol);
+            $('.ran_bbm_jenis').val(ran_bbm_jenis);
+            $('.ran_jen').val(ran_jen);
+            $('.ran_tipe').val(ran_tipe);
+            $('.ran_satker').val(ran_satker);
+            $('.ran_wilayah').val(ran_wilayah);
+            $('.ran_liter').val(ran_liter);
+            $('.ran_bbm_isi').val(ran_bbm_isi);
+            $('.ran_spbu').val(ran_spbu);
             // Call Modal Edit
-            $('#editModal').modal('show');
+            $('#editModalKendaraan').modal('show');
         });
 
-        // get Delete Product
+    
         $(document).on('click', '.btn-delete', function(){
             // get data from button edit
-            const id = $(this).data('id');
+            const ran_id = $(this).data('ran_id');
             // Set data to Form Edit
-            $('.id').val(id);
+            $('.ran_id').val(ran_id);
             // Call Modal Edit
-            $('#deleteModal').modal('show');
+            $('#deleteModalKendaraan').modal('show');
         });
 
         $(document).on('click', '.btn-delete', function(){
@@ -143,7 +143,7 @@
             // Call Modal Edit
             $('#logoutModal').modal('show');
         });
-        $('#contoh').DataTable( {
+        $('#tableSPBU').DataTable( {
         dom: 'Bfrtip',
         buttons: [ 
 			{
@@ -153,12 +153,30 @@
 			    title: 'Daftar SPBU',
 			    exportOptions: {
 				   
-				    columns: [ 0, 1, 2,3]
+				    columns: [ 0, 1, 2,3,4,5]
 			    },
 			   
 		   }
-		],
+           ,'pdf','excel'],
     } );
+
+    $('#tableKendaraan').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [ 
+			{
+			    extend: 'print',
+			    text: 'Print',
+			    messageTop: 'Daftar Kendaraan',
+			    title: 'Daftar Kendaraan',
+			    exportOptions: {
+				   
+				    columns: [ 0, 1, 2,3,4,5,6,7,8,9]
+			    },
+			   
+		   }
+           ,'pdf','excel'],
+    } );
+
     });
 </script>
 
