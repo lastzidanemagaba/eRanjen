@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2022 at 11:35 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Feb 11, 2022 at 04:02 AM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -97,9 +97,10 @@ CREATE TABLE `kendaraan` (
 --
 
 INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran_tipe`, `ran_satker`, `ran_kondisi`, `ran_wilayah`, `ran_liter`, `ran_bbm_isi`, `ran_spbu`, `ran_deleted`, `ran_deleted_by`, `ran_deleted_tgl`) VALUES
-(3, 'HIV-1', '2', '2', '3', '6', '', '5', '512', '20', '1', '', '', NULL),
-(4, 'SDADSADSADAS', '1', '1', '2', '19', '', '1', '36262', '15', '15', '', '', NULL),
-(5, 'SADSADSADSADASDA', '2', '2', '3', '21', '', '3', '333', '17', '15', '', '', NULL);
+(3, 'HIV-111', '1', '1', '2', '18', '3', '1', '123', '20', '1', '', '', NULL),
+(4, 'CINTA-V1', '1', '2', '2', '19', '1', '1', '36262', '15', '15', '', '', NULL),
+(5, 'JUREH-01', '1', '2', '3', '21', '3', '3', '333', '17', '15', '', '', NULL),
+(7, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -653,7 +654,7 @@ ALTER TABLE `kartu_trxs`
 -- AUTO_INCREMENT for table `kendaraan`
 --
 ALTER TABLE `kendaraan`
-  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `log_aktifitas`
@@ -665,7 +666,7 @@ ALTER TABLE `log_aktifitas`
 -- AUTO_INCREMENT for table `master_bbm_jenis`
 --
 ALTER TABLE `master_bbm_jenis`
-  MODIFY `mbj_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `mbj_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `master_kondisi`
@@ -677,7 +678,7 @@ ALTER TABLE `master_kondisi`
 -- AUTO_INCREMENT for table `master_ran_jen`
 --
 ALTER TABLE `master_ran_jen`
-  MODIFY `mrj_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `mrj_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `master_ran_tipe`
