@@ -18,6 +18,10 @@ class Kendaraan extends BaseController
         $resultsatker = $model->tampil_satker();
         $resultwilayahtugas = $model->tampil_wilayahtugas();
         $resultspbu = $model->tampil_spbu();
+        $resultall = $model->join2table();
+        $resultkondisi = $model->tampil_kondisi();
+        $data['groupskondisi'] = $resultkondisi;
+        $data['groupsall'] = $resultall;
         $data['groupsspbu'] = $resultspbu;
         $data['getKendaraan'] = $model->getKendaraan();
         $data['groupskendaraan'] = $resultkendaraan;
@@ -31,27 +35,6 @@ class Kendaraan extends BaseController
         echo view('footer_view',$data);
     }
 
-    public function add()
-    {
-        $model = new Kendaraan_model;
-        $data = array(
-            'ran_nopol' => strtoupper($this->request->getPost('ran_nopol')),
-            'ran_bbm_jenis' => strtoupper($this->request->getPost('ran_bbm_jenis')),
-            'ran_jen'  => strtoupper($this->request->getPost('ran_jen')),
-            'ran_tipe'  => strtoupper($this->request->getPost('ran_tipe')),
-            'ran_satker'  => strtoupper($this->request->getPost('ran_satker')),
-            'ran_wilayah'  => strtoupper($this->request->getPost('ran_wilayah')),
-            'ran_liter'  => strtoupper($this->request->getPost('ran_liter')),
-            'ran_bbm_isi'  => strtoupper($this->request->getPost('ran_bbm_isi')),
-            'ran_spbu'  => strtoupper($this->request->getPost('ran_spbu'))
-        );
-        $model->saveKendaraan($data);
-        echo '<script>
-                alert("Sukses Tambah Data Kendaraan");
-                window.location="'.base_url('Kendaraan').'"
-            </script>';
-
-    }
 
     public function delete()
     {
@@ -73,20 +56,40 @@ class Kendaraan extends BaseController
                 </script>';
         }
     }
+    public function add()
+    {
+        $model = new Kendaraan_model;
+        $data = array(
+            'ran_nopol' => strtoupper($this->request->getPost('ran_nopol')),
+            'ran_bbm_jenis' => strtoupper($this->request->getPost('mbj_id')),
+            'ran_jen'  => strtoupper($this->request->getPost('mrj_id')),
+            'ran_tipe'  => strtoupper($this->request->getPost('mrt_id')),
+            'ran_satker'  => strtoupper($this->request->getPost('msat_id')),
+            'ran_kondisi'  => strtoupper($this->request->getPost('mkon_id')),
+            'ran_wilayah'  => strtoupper($this->request->getPost('mwil_id')),
+            'ran_liter'  => strtoupper($this->request->getPost('ran_liter'))
+        );
+        $model->saveKendaraan($data);
+        echo '<script>
+                alert("Sukses Tambah Data Kendaraan");
+                window.location="'.base_url('Kendaraan').'"
+            </script>';
+
+    }
 
     public function update(){
         $model = new Kendaraan_model();
         $id = $this->request->getPost('ran_id');
         $data = array(
             'ran_nopol' => strtoupper($this->request->getPost('ran_nopol')),
-            'ran_bbm_jenis' => strtoupper($this->request->getPost('ran_bbm_jenis')),
-            'ran_jen'  => strtoupper($this->request->getPost('ran_jen')),
-            'ran_tipe'  => strtoupper($this->request->getPost('ran_tipe')),
-            'ran_satker'  => strtoupper($this->request->getPost('ran_satker')),
-            'ran_wilayah'  => strtoupper($this->request->getPost('ran_wilayah')),
-            'ran_liter'  => strtoupper($this->request->getPost('ran_liter')),
-            'ran_bbm_isi'  => strtoupper($this->request->getPost('ran_bbm_isi')),
-            'ran_spbu'  => strtoupper($this->request->getPost('ran_spbu'))
+            'ran_bbm_jenis' => strtoupper($this->request->getPost('mbj_id')),
+            'ran_jen'  => strtoupper($this->request->getPost('mrj_id')),
+            'ran_tipe'  => strtoupper($this->request->getPost('mrt_id')),
+            'ran_satker'  => strtoupper($this->request->getPost('msat_id')),
+            'ran_kondisi'  => strtoupper($this->request->getPost('mkon_id')),
+            'ran_wilayah'  => strtoupper($this->request->getPost('mwil_id')),
+            'ran_liter'  => strtoupper($this->request->getPost('ran_liter'))
+            
         );
         $kondisi =  $model->updateKendaraan($data, $id);
         if(isset($kondisi))

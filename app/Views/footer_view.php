@@ -86,25 +86,23 @@
             // get data from button edit
             const ran_id = $(this).data('ran_id');
             const ran_nopol = $(this).data('ran_nopol');
-            const ran_bbm_jenis = $(this).data('ran_bbm_jenis');
-            const ran_jen = $(this).data('ran_jen');
-            const ran_tipe = $(this).data('ran_tipe');
-            const ran_satker = $(this).data('ran_satker');
-            const ran_wilayah = $(this).data('ran_wilayah');
+            const mbj_id  = $(this).data('mbj_id');
+            const mrj_id = $(this).data('mrj_id');
+            const mrt_id = $(this).data('mrt_id');
+            const msat_id = $(this).data('msat_id');
+            const mkon_id = $(this).data('mkon_id');
+            const mwil_id = $(this).data('mwil_id');
             const ran_liter = $(this).data('ran_liter');
-            const ran_bbm_isi = $(this).data('ran_bbm_isi');
-            const ran_spbu = $(this).data('ran_spbu');
             // Set data to Form Edit
             $('.ran_id').val(ran_id);
             $('.ran_nopol').val(ran_nopol);
-            $('.ran_bbm_jenis').val(ran_bbm_jenis);
-            $('.ran_jen').val(ran_jen);
-            $('.ran_tipe').val(ran_tipe);
-            $('.ran_satker').val(ran_satker);
-            $('.ran_wilayah').val(ran_wilayah);
+            $('.mbj_id').val(mbj_id).trigger('change');
+            $('.mrj_id').val(mrj_id).trigger('change');
+            $('.mrt_id').val(mrt_id).trigger('change');
+            $('.msat_id').val(msat_id).trigger('change');
+            $('.mkon_id').val(mkon_id).trigger('change');
+            $('.mwil_id').val(mwil_id).trigger('change');
             $('.ran_liter').val(ran_liter);
-            $('.ran_bbm_isi').val(ran_bbm_isi);
-            $('.ran_spbu').val(ran_spbu);
             // Call Modal Edit
             $('#editModalKendaraan').modal('show');
         });
@@ -155,9 +153,24 @@
 				   
 				    columns: [ 0, 1, 2,3,4,5]
 			    },
+                
 			   
 		   }
-           ,'pdf','excel'],
+           ,
+           {
+                extend: 'pdf',
+                text: 'Pdf',
+                exportOptions: {
+                columns: [1,2,3,4,5]
+            }
+            },
+            {
+                extend: 'excel',
+                text: 'Excel',
+                exportOptions: {
+                columns: [1,2,3,4,5]
+            }
+            }],
     } );
 
     $('#tableKendaraan').DataTable( {
@@ -170,11 +183,25 @@
 			    title: 'Daftar Kendaraan',
 			    exportOptions: {
 				   
-				    columns: [ 0, 1, 2,3,4,5,6,7,8,9]
+				    columns: [ 0, 1, 2,3,4,5,6,7,8]
 			    },
 			   
-		   }
-           ,'pdf','excel'],
+		   },
+           {
+                extend: 'pdf',
+                text: 'Pdf',
+                exportOptions: {
+                columns: [1,2,3,4,5,6,7,8]
+            }
+            },
+            {
+                extend: 'excel',
+                text: 'Excel',
+                exportOptions: {
+                columns: [1,2,3,4,5,6,7,8]
+            }
+            }
+           ],
     } );
 
     });

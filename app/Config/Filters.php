@@ -71,8 +71,10 @@ class Filters extends BaseConfig
                 'dashboard',
                 'SPBU',
                 'SPBU/*',
-                'KartuRanjen',
-                'KartuRanjen/*'
+                'Kendaraan',
+                'Kendaraan/*',
+                'public',
+                'public/*',
             ]
         ]
     ];

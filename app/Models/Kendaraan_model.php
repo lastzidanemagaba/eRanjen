@@ -9,6 +9,7 @@ class Kendaraan_model extends Model
     protected $tablemaster_ran_jen = 'master_ran_jen'; 
     protected $tablemaster_ran_tipe = 'master_ran_tipe'; 
     protected $tablemaster_satker = 'master_satker'; 
+    protected $tablemaster_kondisi = 'master_kondisi'; 
     protected $tablemaster_wilayah = 'master_wilayah'; 
     protected $tablespbu = 'spbus';
 
@@ -21,6 +22,28 @@ class Kendaraan_model extends Model
         }else{
             return $builder->getWhere(['ran_id ' => $id]);
         }   
+    }
+
+ 
+    function join2table(){
+        $db = \Config\Database::connect();
+        $builder = $db->table('kendaraan');
+        $builder->select('kendaraan.ran_id,kendaraan.ran_nopol,master_bbm_jenis.mbj_id ,master_bbm_jenis.mbj_bbmnama as ran_bbm_jenis,master_ran_jen.mrj_id,master_ran_jen.mrj_nama as ran_jen,master_ran_tipe.mrt_id,master_ran_tipe.mrt_nama as ran_tipe,master_satker.msat_id,master_satker.msat_nama as ran_satker,master_kondisi.mkon_id ,master_kondisi.mkon_nama as ran_kondisi,master_wilayah.mwil_id,master_wilayah.mwil_nama as ran_wilayah,ran_liter');
+        $builder->join('master_bbm_jenis', 'master_bbm_jenis.mbj_id = kendaraan.ran_bbm_jenis','left');
+        $builder->join('master_ran_jen', 'master_ran_jen.mrj_id = kendaraan.ran_bbm_jenis','left');
+        $builder->join('master_ran_tipe', 'master_ran_tipe.mrt_id  = kendaraan.ran_tipe','left');
+        $builder->join('master_satker', 'master_satker.msat_id = kendaraan.ran_satker','left');
+        $builder->join('master_wilayah', 'master_wilayah.mwil_id  = kendaraan.ran_wilayah','left');
+        $builder->join('master_kondisi', 'master_kondisi.mkon_id  = kendaraan.ran_kondisi','left');
+        return $builder->get()->getResultArray();  
+        
+     }
+
+     public function tampil_kondisi(){
+        $db = \Config\Database::connect();
+        $builder = $this->db->table($this->tablemaster_kondisi);
+        $builder->select();
+        return $builder->get()->getResultArray();
     }
 
     public function tampil_SPBU(){

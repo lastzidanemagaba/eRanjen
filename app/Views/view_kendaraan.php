@@ -22,15 +22,17 @@
                                             <th><center>Ranjen</center></th>
                                             <th><center>Tipe Kendaraan</center></th>
                                             <th><center>Satker</center></th>
+                                            <th><center>Kondisi</center></th>
                                             <th><center>Wilayah Tugas</center></th>
                                             <th><center>Jumlah Liter</center></th>
-                                            <th><center>BBM Isi</center></th>
-                                            <th><center>SPBU</center></th>
                                             <th><center>Action</center></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $no=1; foreach($getKendaraan as $isi){?>
+                                        <?php 
+                                        
+                                        ?>
+                                    <?php $no=1; foreach($groupsall as $isi){?>
                             <tr>
                                 
                                 <td><center><?= $no;?></center></td>
@@ -39,12 +41,11 @@
                                 <td><center><?= $isi['ran_jen'];?></center></td>
                                 <td><center><?= $isi['ran_tipe'];?></center></td>
                                 <td><center><?= $isi['ran_satker'];?></center></td>
+                                <td><center><?= $isi['ran_kondisi'];?></center></td>
                                 <td><center><?= $isi['ran_wilayah'];?></center></td>
                                 <td><center><?= $isi['ran_liter'];?></center></td>
-                                <td><center><?= $isi['ran_bbm_isi'];?></center></td>
-                                <td><center><?= $isi['ran_spbu'];?></center></td>
                                 <td>
-                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-ran_id="<?= $isi['ran_id'];?>" data-ran_nopol="<?= $isi['ran_nopol'];?>" data-ran_bbm_jenis="<?= $isi['ran_bbm_jenis'];?>" data-ran_jen="<?= $isi['ran_jen'];?>" data-ran_tipe="<?= $isi['ran_tipe'];?>" data-ran_satker="<?= $isi['ran_satker'];?>" data-ran_wilayah="<?= $isi['ran_wilayah'];?>" data-ran_liter="<?= $isi['ran_liter'];?>" data-ran_bbm_isi="<?= $isi['ran_bbm_isi'];?>" data-ran_spbu="<?= $isi['ran_spbu'];?>">Edit</a></center>
+                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-ran_id="<?= $isi['ran_id'];?>" data-ran_nopol="<?= $isi['ran_nopol'];?>" data-mbj_id ="<?= $isi['mbj_id'];?>" data-mrj_id ="<?= $isi['mrj_id'];?>" data-mrt_id="<?= $isi['mrt_id'];?>" data-msat_id ="<?= $isi['msat_id'];?>" data-mkon_id="<?= $isi['mkon_id'];?>" data-mwil_id="<?= $isi['mwil_id'];?>" data-ran_liter="<?= $isi['ran_liter'];?>">Edit</a></center>
                                     <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-ran_id="<?= $isi['ran_id'];?>">Delete</a></center>
                                 </td>
                             </tr>
@@ -99,40 +100,61 @@
                     <div class="modal-body">      
                         <div class="form-group">
                                 <label>Nopol</label>
-                                <input type="text" class="form-control ran_nopol" name="ran_nopol">
+                                <input type="text" class="form-control ran_nopol" name="ran_nopol" >
                         </div>
                         <div class="form-group">
                                 <label>Jenis BBM</label>
-                                <input type="text" class="form-control ran_bbm_jenis" name="ran_bbm_jenis">
+                                <select name="mbj_id" class="form-control mbj_id" >
+                                <?php foreach($groupsbbm as $isia):?>
+                                <option value="<?= $isia['mbj_id'];?>"><?= $isia['mbj_bbmnama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
                         <div class="form-group">
                                 <label>Ranjen</label>
-                                <input type="text" class="form-control ran_jen" name="ran_jen">
+                                <select name="mrj_id" class="form-control mrj_id" >
+                                <?php foreach($groupsranjen as $isi):?>
+                                <option value="<?= $isi['mrj_id'];?>"><?= $isi['mrj_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
                         <div class="form-group">
                                 <label>Tipe Kendaraan</label>
-                                <input type="text" class="form-control ran_tipe" name="ran_tipe">
+                                <select name="mrt_id" class="form-control mrt_id" >
+                                <?php foreach($groupstipekendaraan as $isi):?>
+                                <option value="<?= $isi['mrt_id'];?>"><?= $isi['mrt_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
                         <div class="form-group">
                                 <label>Satker</label>
-                                <input type="text" class="form-control ran_satker" name="ran_satker">
+                                <select name="msat_id" class="form-control msat_id" >
+                                <?php foreach($groupssatker as $isi):?>
+                                <option value="<?= $isi['msat_id'];?>"><?= $isi['msat_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Kondisi</label>
+                            <select name="mkon_id" class="form-control mkon_id" >
+                                <?php foreach($groupskondisi as $isia):?>
+                                <option value="<?= $isia['mkon_id'];?>"><?= $isia['mkon_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
                         <div class="form-group">
                                 <label>Wilayah Tugas</label>
-                                <input type="text" class="form-control ran_wilayah" name="ran_wilayah">
+                                <select name="mwil_id" class="form-control mwil_id" >
+                                <?php foreach($groupswilayahtugas as $isi):?>
+                                <option value="<?= $isi['mwil_id'];?>"><?= $isi['mwil_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
                         <div class="form-group">
                                 <label>Jumlah Liter</label>
-                                <input type="text" class="form-control ran_liter" name="ran_liter">
+                                <input type="text" class="form-control ran_liter" name="ran_liter" required>
                         </div>
-                        <div class="form-group">
-                                <label>BBM Isi</label>
-                                <input type="text" class="form-control ran_bbm_isi" name="ran_bbm_isi">
-                        </div>
-                        <div class="form-group">
-                                <label>SPBU</label>
-                                <input type="text" class="form-control ran_spbu" name="ran_spbu">
-                        </div>
+                        
                         
 
                     
@@ -167,7 +189,7 @@
 
                         <div class="form-group">
                             <label>Jenis BBM</label>
-                            <select name="ran_bbm_jenis" class="form-control" required>
+                            <select name="mbj_id" class="form-control" required>
                                 <option value="">-Pilih-</option>
                                 <?php foreach($groupsbbm as $each){ ?><option value="<?php echo $each["mbj_id"]; ?>"><?php echo $each["mbj_bbmnama"]; ?></option>
                                 <?php } ?>
@@ -176,7 +198,7 @@
                         
                         <div class="form-group">
                             <label>Ranjen</label>
-                            <select name="ran_jen" class="form-control" required>
+                            <select name="mrj_id" class="form-control" required>
                                 <option value="">-Pilih-</option>
                                 <?php foreach($groupsranjen as $eachx){ ?><option value="<?php echo $eachx["mrj_id"]; ?>"><?php echo $eachx["mrj_nama"]; ?></option>
                                 <?php } ?>
@@ -185,7 +207,7 @@
 
                         <div class="form-group">
                             <label>Tipe Kendaraan</label>
-                            <select name="ran_tipe" class="form-control" required>
+                            <select name="mrt_id" class="form-control" required>
                                 <option value="">-Pilih-</option>
                                 <?php foreach($groupstipekendaraan as $eachxx){ ?><option value="<?php echo $eachxx["mrt_id"]; ?>"><?php echo $eachxx["mrt_nama"]; ?></option>
                                 <?php } ?>
@@ -194,15 +216,23 @@
 
                         <div class="form-group">
                             <label>Satker</label>
-                            <select name="ran_satker" class="form-control" required>
+                            <select name="msat_id" class="form-control" required>
                                 <option value="">-Pilih-</option>
                                 <?php foreach($groupssatker as $eachxxx){ ?><option value="<?php echo $eachxxx["msat_id"]; ?>"><?php echo $eachxxx["msat_nama"]; ?></option>
                                 <?php } ?>
                             </select>
                         </div>     
                         <div class="form-group">
+                            <label>Kondisi</label>
+                            <select name="mkon_id" class="form-control" required>
+                                <option value="">-Pilih-</option>
+                                    <?php foreach($groupskondisi as $eachxxxxdea){ ?><option value="<?php echo $eachxxxxdea["mkon_id"]; ?>"><?php echo $eachxxxxdea["mkon_nama"]; ?></option>
+                                    <?php } ?>
+                            </select>
+                        </div>       
+                        <div class="form-group">
                             <label>Wilayah Tugas</label>
-                            <select name="ran_wilayah" class="form-control" required>
+                            <select name="mwil_id" class="form-control" required>
                                 <option value="">-Pilih-</option>
                                     <?php foreach($groupswilayahtugas as $eachxxxx){ ?><option value="<?php echo $eachxxxx["mwil_id"]; ?>"><?php echo $eachxxxx["mwil_nama"]; ?></option>
                                     <?php } ?>
@@ -212,24 +242,7 @@
                             <label>Jumlah Liter</label>
                             <input type="number" class="form-control" name="ran_liter" placeholder="Jumlah Liter">
                         </div>        
-                        <div class="form-group">
-                            <label>BBM Isi</label>
-                            <select name="ran_bbm_isi" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                        <?php foreach($groupsspbu as $eachxxxxx){ ?><option value="<?php echo $eachxxxxx["spbu_id"]; ?>"><?php echo $eachxxxxx["spbu_kerjasama"]; ?></option>
-                                        <?php } ?>
-                                </select>
-                            </select>
-                        </div>        
-                        <div class="form-group">
-                            <label>SPBU</label>
-                            <select name="ran_spbu" class="form-control" required >
-                            <option value="">-Pilih-</option>
-                                        <?php foreach($groupsspbu as $eachxxxxx){ ?><option value="<?php echo $eachxxxxx["spbu_id"]; ?>"><?php echo $eachxxxxx["spbu_nama"]; ?></option>
-                                        <?php } ?>
-                                </select>
-                            </select>
-                        </div>        
+                        
                              
                     </div>
                     
