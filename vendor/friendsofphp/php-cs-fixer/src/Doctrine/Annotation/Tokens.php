@@ -22,6 +22,8 @@ use PhpCsFixer\Tokenizer\Token as PhpToken;
  * A list of Doctrine annotation tokens.
  *
  * @internal
+ *
+ * @extends \SplFixedArray<Token>
  */
 final class Tokens extends \SplFixedArray
 {
@@ -36,7 +38,7 @@ final class Tokens extends \SplFixedArray
             throw new \InvalidArgumentException('Input must be a T_DOC_COMMENT token.');
         }
 
-        $tokens = new self();
+        $tokens = [];
 
         $content = $input->getContent();
         $ignoredTextPosition = 0;
@@ -127,6 +129,31 @@ final class Tokens extends \SplFixedArray
             $tokens[] = new Token(DocLexer::T_NONE, substr($content, $ignoredTextPosition));
         }
 
+        return self::fromArray($tokens);
+    }
+
+    /**
+     * Create token collection from array.
+     *
+     * @param Token[] $array       the array to import
+     * @param ?bool   $saveIndices save the numeric indices used in the original array, default is yes
+     */
+    public static function fromArray($array, $saveIndices = null): self
+    {
+        $tokens = new self(\count($array));
+
+        if (null === $saveIndices || $saveIndices) {
+            foreach ($array as $key => $val) {
+                $tokens[$key] = $val;
+            }
+        } else {
+            $index = 0;
+
+            foreach ($array as $val) {
+                $tokens[$index++] = $val;
+            }
+        }
+
         return $tokens;
     }
 
@@ -144,26 +171,6 @@ final class Tokens extends \SplFixedArray
     public function getPreviousMeaningfulToken(int $index): ?int
     {
         return $this->getMeaningfulTokenSibling($index, -1);
-    }
-
-    /**
-     * Returns the index of the closest next token of the given type.
-     *
-     * @param string|string[] $type
-     */
-    public function getNextTokenOfType($type, int $index): ?int
-    {
-        return $this->getTokenOfTypeSibling($index, $type, 1);
-    }
-
-    /**
-     * Returns the index of the closest previous token of the given type.
-     *
-     * @param string|string[] $type
-     */
-    public function getPreviousTokenOfType($type, int $index): ?int
-    {
-        return $this->getTokenOfTypeSibling($index, $type, -1);
     }
 
     /**
@@ -204,27 +211,6 @@ final class Tokens extends \SplFixedArray
         }
 
         return $index + 1;
-    }
-
-    /**
-     * Returns the index of the close brace that matches the open brace at the given index.
-     */
-    public function getArrayEnd(int $index): ?int
-    {
-        $level = 1;
-        for (++$index, $max = \count($this); $index < $max; ++$index) {
-            if ($this[$index]->isType(DocLexer::T_OPEN_CURLY_BRACES)) {
-                ++$level;
-            } elseif ($this[$index]->isType($index, DocLexer::T_CLOSE_CURLY_BRACES)) {
-                --$level;
-            }
-
-            if (0 === $level) {
-                return $index;
-            }
-        }
-
-        return null;
     }
 
     /**
@@ -273,11 +259,6 @@ final class Tokens extends \SplFixedArray
             ));
         }
 
-        if (null === $index) {
-            $index = \count($this);
-            $this->setSize($this->getSize() + 1);
-        }
-
         parent::offsetSet($index, $token);
     }
 
@@ -313,26 +294,6 @@ final class Tokens extends \SplFixedArray
             }
 
             if (!$this[$index]->isType(DocLexer::T_NONE)) {
-                return $index;
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * @param string|string[] $type
-     */
-    private function getTokenOfTypeSibling(int $index, $type, int $direction): ?int
-    {
-        while (true) {
-            $index += $direction;
-
-            if (!$this->offsetExists($index)) {
-                break;
-            }
-
-            if ($this[$index]->isType($type)) {
                 return $index;
             }
         }

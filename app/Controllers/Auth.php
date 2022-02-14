@@ -8,7 +8,6 @@ class Auth extends BaseController
 
     public function __construct()
     {
-        //membuat user model untuk konek ke database 
         $this->userModel = new UserModel();
         $this->session = \Config\Services::session();
         
@@ -37,7 +36,14 @@ class Auth extends BaseController
             if(password_verify($post['user_pass'], $user->user_pass)){
                 $params= ['user_id' => $user->user_id];
                 session()->set($params);
-
+                $model = new UserModel();
+                $data = array(
+                    'logak_tgl' => date('Y-m-d H:i:s'),
+                    'logak_ket'         => "Login Ke Aplikasi Web",
+                    'logak_user'  => $params,
+                    'logak_ip'  => $this->get_client_ip()
+                );
+                $model->saveUserLog($data);
                 return redirect()->to('Dashboard');
             }
             else{
@@ -55,4 +61,18 @@ class Auth extends BaseController
         session()->remove('user_id');
         return redirect()->to('login');
     }
+
+    public function get_client_ip() {
+        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
+            $ip=$_SERVER['HTTP_CLIENT_IP'];
+          }
+          elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+            $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
+          }
+          else{
+            $ip=$_SERVER['REMOTE_ADDR'];
+          }
+          return $ip;
+    }
+
 }

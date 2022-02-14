@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2022 at 04:02 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: Feb 14, 2022 at 12:12 PM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -87,8 +87,8 @@ CREATE TABLE `kendaraan` (
   `ran_liter` varchar(255) NOT NULL,
   `ran_bbm_isi` varchar(255) NOT NULL,
   `ran_spbu` varchar(255) NOT NULL,
-  `ran_deleted` varchar(255) NOT NULL,
-  `ran_deleted_by` varchar(255) NOT NULL,
+  `ran_deleted` varchar(255) DEFAULT NULL,
+  `ran_deleted_by` varchar(255) DEFAULT NULL,
   `ran_deleted_tgl` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -100,7 +100,8 @@ INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran
 (3, 'HIV-111', '1', '1', '2', '18', '3', '1', '123', '20', '1', '', '', NULL),
 (4, 'CINTA-V1', '1', '2', '2', '19', '1', '1', '36262', '15', '15', '', '', NULL),
 (5, 'JUREH-01', '1', '2', '3', '21', '3', '3', '333', '17', '15', '', '', NULL),
-(7, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', '', '', NULL);
+(7, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', '', '', NULL),
+(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -110,10 +111,42 @@ INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran
 
 CREATE TABLE `log_aktifitas` (
   `logak_id` int(255) NOT NULL,
-  `logak_tgl` datetime(6) NOT NULL,
+  `logak_tgl` datetime NOT NULL,
   `logak_ket` varchar(255) NOT NULL,
-  `logak_user` varchar(255) NOT NULL
+  `logak_user` varchar(255) NOT NULL,
+  `logak_ip` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `log_aktifitas`
+--
+
+INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`, `logak_ip`) VALUES
+(1, '2022-02-14 14:56:05', 'Login Ke Aplikasi Web', '1', ''),
+(2, '2022-02-14 14:57:25', 'Login Ke Aplikasi Web', '1', '::1'),
+(3, '2022-02-14 14:59:43', 'Login Ke Aplikasi Web', '1', 'UNKNOWN'),
+(4, '2022-02-14 17:02:00', 'Login Ke Aplikasi Web', '3', '::1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_alokasibbm`
+--
+
+CREATE TABLE `master_alokasibbm` (
+  `ran_id_bbm` int(11) NOT NULL,
+  `ran_total_bbm` int(255) NOT NULL,
+  `ran_updated_by` int(11) DEFAULT NULL,
+  `ran_updated_at` datetime DEFAULT NULL,
+  `ran_deleted_by` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `master_alokasibbm`
+--
+
+INSERT INTO `master_alokasibbm` (`ran_id_bbm`, `ran_total_bbm`, `ran_updated_by`, `ran_updated_at`, `ran_deleted_by`) VALUES
+(1, 6000, 1, '2022-02-14 14:37:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -510,27 +543,29 @@ INSERT INTO `spbus` (`spbu_id`, `spbu_nama`, `spbu_kode`, `spbu_alamat`, `spbu_w
 --
 
 CREATE TABLE `users` (
-  `user_id` int(5) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `user_nama` varchar(255) NOT NULL,
   `user_email` varchar(255) NOT NULL,
   `user_pass` varchar(255) NOT NULL,
   `user_role` varchar(5) NOT NULL,
-  `user_created_at` datetime DEFAULT NULL,
-  `user_created_by` varchar(255) NOT NULL,
-  `user_banned` varchar(255) NOT NULL,
-  `user_banned_by` varchar(255) NOT NULL,
+  `user_created_at` datetime NOT NULL,
+  `user_created_by` varchar(255) DEFAULT NULL,
+  `user_banned` varchar(255) DEFAULT NULL,
+  `user_banned_by` varchar(255) DEFAULT NULL,
   `user_banned_tgl` datetime DEFAULT NULL,
-  `user_deleted` varchar(255) NOT NULL,
-  `user_deleted_by` varchar(255) NOT NULL,
-  `user_deleted_tgl` datetime DEFAULT NULL
+  `user_deleted` varchar(255) DEFAULT NULL,
+  `user_deleted_by` varchar(255) DEFAULT NULL,
+  `user_deleted_tgl` datetime DEFAULT NULL,
+  `user_updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `user_nama`, `user_email`, `user_pass`, `user_role`, `user_created_at`, `user_created_by`, `user_banned`, `user_banned_by`, `user_banned_tgl`, `user_deleted`, `user_deleted_by`, `user_deleted_tgl`) VALUES
-(1, 'takmampu', 'takmampu@gmail.com', '$2y$10$q6HNKRQX.mxYH/MgnAeZAuuYtB3miEp0..QDlkQEBXr2qWdRrdoN2', '1', '2022-02-09 04:59:29', '', '', '', NULL, '', '', NULL);
+INSERT INTO `users` (`user_id`, `user_nama`, `user_email`, `user_pass`, `user_role`, `user_created_at`, `user_created_by`, `user_banned`, `user_banned_by`, `user_banned_tgl`, `user_deleted`, `user_deleted_by`, `user_deleted_tgl`, `user_updated_at`) VALUES
+(1, 'zidanemagaba', 'lastzidanemagaba@gmail.com', '$2y$10$bc5hcRodp/6AzpLGiB/Jg.biLJUK8VKhtuGbWqAG6SnGH6pJCLeqe', '3', '2022-02-14 05:54:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-14 12:49:58'),
+(3, 'maurel', 'maurel@gmail.com', '$2y$10$qsQ1uLe.20.m7PVj4dnSK.E8S/KZS.TcGHcVcBb.YOBZ.oJEBbaH2', '3', '2022-02-14 12:18:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -549,8 +584,9 @@ CREATE TABLE `user_roles` (
 --
 
 INSERT INTO `user_roles` (`role_id`, `role_nama`, `role_ket`) VALUES
-(1, 'Admin', 'Manage Admin'),
-(2, 'User', 'Manage User');
+(1, 'User', 'Manage User'),
+(2, 'Admin', 'Manage Admin'),
+(3, 'SuperAdmin', 'Manage All Access');
 
 --
 -- Indexes for dumped tables
@@ -579,6 +615,12 @@ ALTER TABLE `kendaraan`
 --
 ALTER TABLE `log_aktifitas`
   ADD PRIMARY KEY (`logak_id`);
+
+--
+-- Indexes for table `master_alokasibbm`
+--
+ALTER TABLE `master_alokasibbm`
+  ADD PRIMARY KEY (`ran_id_bbm`);
 
 --
 -- Indexes for table `master_bbm_jenis`
@@ -654,13 +696,19 @@ ALTER TABLE `kartu_trxs`
 -- AUTO_INCREMENT for table `kendaraan`
 --
 ALTER TABLE `kendaraan`
-  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `master_alokasibbm`
+--
+ALTER TABLE `master_alokasibbm`
+  MODIFY `ran_id_bbm` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `master_bbm_jenis`
@@ -708,13 +756,13 @@ ALTER TABLE `spbus`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_roles`
 --
 ALTER TABLE `user_roles`
-  MODIFY `role_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `role_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

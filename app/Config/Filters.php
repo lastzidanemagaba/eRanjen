@@ -75,6 +75,10 @@ class Filters extends BaseConfig
                 'Kendaraan/*',
                 'public',
                 'public/*',
+                'User',
+                'User/*',
+                'AlokasiBBM',
+                'AlokasiBBM/*',
             ]
         ]
     ];

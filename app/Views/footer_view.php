@@ -72,13 +72,31 @@
             const user_nama = $(this).data('user_nama');
             const user_email = $(this).data('user_email');
             const user_role = $(this).data('user_role');
+            
             // Set data to Form Edit
             $('.user_id').val(user_id);
             $('.user_nama').val(user_nama);
-            $('.user_email').val(user_email).trigger('change');
+            $('.user_email').val(user_email);
             $('.user_role').val(user_role).trigger('change');
             // Call Modal Edit
             $('#editModalUser').modal('show');
+        });
+
+        $(document).on('click', '.btn-edit', function(){
+            // get data from button edit
+            const ran_id_bbm  = $(this).data('ran_id_bbm');
+            const ran_total_bbm = $(this).data('ran_total_bbm');
+            const ran_updated_at = $(this).data('ran_updated_at');
+            const ran_updated_by = $(this).data('ran_updated_by');
+            
+            
+            // Set data to Form Edit
+            $('.ran_id_bbm').val(ran_id_bbm);
+            $('.ran_total_bbm').val(ran_total_bbm);
+            $('.ran_updated_at').val(ran_updated_at);
+            $('.ran_updated_by').val(ran_updated_by);
+            // Call Modal Edit
+            $('#editModalAlokasiBBM').modal('show');
         });
         
         // get Edit Kartu
@@ -132,6 +150,14 @@
             $('.id_spbu').val(id_spbu);
             // Call Modal Edit
             $('#deleteModalSPBU').modal('show');
+        });
+        $(document).on('click', '.btn-delete', function(){
+            // get data from button edit
+            const ran_id_bbm = $(this).data('ran_id_bbm');
+            // Set data to Form Edit
+            $('.ran_id_bbm').val(ran_id_bbm);
+            // Call Modal Edit
+            $('#deleteModalAlokasiBBM').modal('show');
         });
         $(document).on('click', '.btn-warning', function(){
             // get data from button edit
@@ -204,7 +230,73 @@
            ],
     } );
 
+    $('#tableUser').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [ 
+			{
+			    extend: 'print',
+			    text: 'Print',
+			    messageTop: 'Daftar User',
+			    title: 'Daftar User',
+			    exportOptions: {
+				   
+				    columns: [ 0, 1, 2,3,4]
+			    },
+			   
+		   },
+           {
+                extend: 'pdf',
+                text: 'Pdf',
+                exportOptions: {
+                columns: [1,2,3,4]
+            }
+            },
+            {
+                extend: 'excel',
+                text: 'Excel',
+                exportOptions: {
+                columns: [1,2,3,4]
+            }
+            }
+           ],
+    } );
+
+    $('#tableAlokasiBBM').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [ 
+			{
+			    extend: 'print',
+			    text: 'Print',
+			    messageTop: 'Daftar Alokasi BBM',
+			    title: 'Daftar Alokasi BBM',
+			    exportOptions: {
+				   
+				    columns: [ 0]
+			    },
+			   
+		   },
+           {
+                extend: 'pdf',
+                text: 'Pdf',
+                exportOptions: {
+                columns: [1]
+            }
+            },
+            {
+                extend: 'excel',
+                text: 'Excel',
+                exportOptions: {
+                columns: [1]
+            }
+            }
+           ],
+    } );
+
+    
+
     });
+
+    
 </script>
 
 </body>

@@ -621,3 +621,177 @@ ERROR - 2022-02-11 04:27:57 --> Unknown column 'mwil_id' in 'field list'
 ERROR - 2022-02-11 04:28:32 --> Unknown column 'mbj_id' in 'field list'
 ERROR - 2022-02-11 04:28:37 --> Unknown column 'mbj_id' in 'field list'
 ERROR - 2022-02-11 04:29:33 --> Unknown column 'mwil_id' in 'field list'
+CRITICAL - 2022-02-11 11:40:26 --> Class "App\Models\User_model" not found
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-02-11 11:40:47 --> Invalid file: view_login.php
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('view_login.php')
+#1 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_login', Array, true)
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(17): view('view_login', Array)
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+ERROR - 2022-02-11 12:07:38 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 12:11:00 --> Undefined property: App\Controllers\User::$jancok1
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 64)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->update()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-02-11 12:11:50 --> Undefined property: App\Controllers\User::$$2y$10$IQQgBr95NpgSKSXqw/ZD6udNgvRBCULNtNPNld3NAXUrU2wM98YUW
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 68)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->update()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-02-11 12:12:11 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:15:18 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:15:24 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:15:33 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:15:45 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:16:05 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:16:36 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:16:55 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 12:16:55 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(75): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 75)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->update()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-02-11 12:17:08 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 12:17:08 --> Call to undefined function App\Controllers\printr()
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->update()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+ERROR - 2022-02-11 12:17:18 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 12:19:17 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:37:50 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:39:48 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:40:44 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:41:44 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:45:39 --> Unknown column 'user_password' in 'field list'
+ERROR - 2022-02-11 13:47:59 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 14:02:04 --> You must set the database table to be used with your query.
+#0 D:\xampp\htdocs\eRanjen\app\Models\UserModel.php(37): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(14): App\Models\UserModel->tampil_Role()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-02-11 14:02:20 --> Call to undefined method App\Models\UserModel::tampil_Role
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(14): CodeIgniter\Model->__call('tampil_Role', Array)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-02-11 14:02:38 --> Undefined variable $resultRole
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 17)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-02-11 14:02:50 --> Undefined variable $groupsrole
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 107)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-02-11 14:48:35 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 15:24:14 --> Undefined array key "user_created_at"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 34)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-02-11 15:26:17 --> Unknown column 'user_password' in 'field list'
+CRITICAL - 2022-02-11 15:47:13 --> Undefined variable $data
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 18)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-02-11 15:48:01 --> Column 'name' cannot be null
+CRITICAL - 2022-02-11 15:49:23 --> Undefined array key "user_nama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-02-11 15:49:50 --> Undefined array key "user_nama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-02-11 15:49:55 --> Undefined array key "user_nama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-02-11 15:50:31 --> Undefined array key "user_nama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_user.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 35)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_user', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\User.php(19): view('view_user', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\User->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}

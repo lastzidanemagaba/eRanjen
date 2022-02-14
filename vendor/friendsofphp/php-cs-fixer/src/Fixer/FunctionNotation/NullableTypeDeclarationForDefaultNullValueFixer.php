@@ -98,8 +98,8 @@ final class NullableTypeDeclarationForDefaultNullValueFixer extends AbstractFixe
     protected function applyFix(\SplFileInfo $file, Tokens $tokens): void
     {
         $functionsAnalyzer = new FunctionsAnalyzer();
-
         $tokenKinds = [T_FUNCTION];
+
         if (\PHP_VERSION_ID >= 70400) {
             $tokenKinds[] = T_FN;
         }
@@ -112,7 +112,6 @@ final class NullableTypeDeclarationForDefaultNullValueFixer extends AbstractFixe
             }
 
             $arguments = $functionsAnalyzer->getFunctionArguments($tokens, $index);
-
             $this->fixFunctionParameters($tokens, $arguments);
         }
     }
@@ -122,6 +121,16 @@ final class NullableTypeDeclarationForDefaultNullValueFixer extends AbstractFixe
      */
     private function fixFunctionParameters(Tokens $tokens, array $arguments): void
     {
+        $constructorPropertyModifiers = [
+            CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PUBLIC,
+            CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PROTECTED,
+            CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PRIVATE,
+        ];
+
+        if (\defined('T_READONLY')) { // @TODO: drop condition when PHP 8.1+ is required
+            $constructorPropertyModifiers[] = T_READONLY;
+        }
+
         foreach (array_reverse($arguments) as $argumentInfo) {
             if (
                 // Skip, if the parameter
@@ -137,17 +146,10 @@ final class NullableTypeDeclarationForDefaultNullValueFixer extends AbstractFixe
 
             $argumentTypeInfo = $argumentInfo->getTypeAnalysis();
 
-            if (
-                \PHP_VERSION_ID >= 80000
-                && false === $this->configuration['use_nullable_type_declaration']
-            ) {
+            if (\PHP_VERSION_ID >= 80000 && false === $this->configuration['use_nullable_type_declaration']) {
                 $visibility = $tokens[$tokens->getPrevMeaningfulToken($argumentTypeInfo->getStartIndex())];
 
-                if ($visibility->isGivenKind([
-                    CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PUBLIC,
-                    CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PROTECTED,
-                    CT::T_CONSTRUCTOR_PROPERTY_PROMOTION_PRIVATE,
-                ])) {
+                if ($visibility->isGivenKind($constructorPropertyModifiers)) {
                     continue;
                 }
             }

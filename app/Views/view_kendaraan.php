@@ -43,7 +43,7 @@
                                 <td><center><?= $isi['ran_satker'];?></center></td>
                                 <td><center><?= $isi['ran_kondisi'];?></center></td>
                                 <td><center><?= $isi['ran_wilayah'];?></center></td>
-                                <td><center><?= $isi['ran_liter'];?></center></td>
+                                <td><center><?= $isi['ran_liter']." Liter";?></center></td>
                                 <td>
                                     <center><a href="#" class="btn btn-info btn-sm btn-edit" data-ran_id="<?= $isi['ran_id'];?>" data-ran_nopol="<?= $isi['ran_nopol'];?>" data-mbj_id ="<?= $isi['mbj_id'];?>" data-mrj_id ="<?= $isi['mrj_id'];?>" data-mrt_id="<?= $isi['mrt_id'];?>" data-msat_id ="<?= $isi['msat_id'];?>" data-mkon_id="<?= $isi['mkon_id'];?>" data-mwil_id="<?= $isi['mwil_id'];?>" data-ran_liter="<?= $isi['ran_liter'];?>">Edit</a></center>
                                     <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-ran_id="<?= $isi['ran_id'];?>">Delete</a></center>

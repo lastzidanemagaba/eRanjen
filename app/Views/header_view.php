@@ -72,7 +72,7 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Data</h6>
-                        <a class="collapse-item" href="<?= base_url('SPBU');?>">Alokasi BBM</a>
+                        <a class="collapse-item" href="<?= base_url('AlokasiBBM');?>">Alokasi BBM</a>
                         <a class="collapse-item" href="<?= base_url('Kendaraan');?>">Kendaraan</a>
                         <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kartu</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -83,7 +83,7 @@
                             <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Jabatan</a>
                         </div>
                         <a class="collapse-item" href="<?= base_url('SPBU');?>">SPBU</a>
-                        <a class="collapse-item" href="<?= base_url('SPBU');?>">User</a>
+                        <a class="collapse-item" href="<?= base_url('User');?>">User</a>
                     </div>
                 </div>
             </li>
