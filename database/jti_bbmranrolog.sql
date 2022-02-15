@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2022 at 12:12 PM
+-- Generation Time: Feb 15, 2022 at 01:23 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -125,7 +125,8 @@ INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`,
 (1, '2022-02-14 14:56:05', 'Login Ke Aplikasi Web', '1', ''),
 (2, '2022-02-14 14:57:25', 'Login Ke Aplikasi Web', '1', '::1'),
 (3, '2022-02-14 14:59:43', 'Login Ke Aplikasi Web', '1', 'UNKNOWN'),
-(4, '2022-02-14 17:02:00', 'Login Ke Aplikasi Web', '3', '::1');
+(4, '2022-02-14 17:02:00', 'Login Ke Aplikasi Web', '3', '::1'),
+(5, '2022-02-15 10:39:18', 'Login Ke Aplikasi Web', '3', '::1');
 
 -- --------------------------------------------------------
 
@@ -553,8 +554,8 @@ CREATE TABLE `users` (
   `user_banned` varchar(255) DEFAULT NULL,
   `user_banned_by` varchar(255) DEFAULT NULL,
   `user_banned_tgl` datetime DEFAULT NULL,
-  `user_deleted` varchar(255) DEFAULT NULL,
-  `user_deleted_by` varchar(255) DEFAULT NULL,
+  `user_deleted` int(11) DEFAULT 0,
+  `user_deleted_by` int(11) DEFAULT NULL,
   `user_deleted_tgl` datetime DEFAULT NULL,
   `user_updated_at` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -564,8 +565,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_nama`, `user_email`, `user_pass`, `user_role`, `user_created_at`, `user_created_by`, `user_banned`, `user_banned_by`, `user_banned_tgl`, `user_deleted`, `user_deleted_by`, `user_deleted_tgl`, `user_updated_at`) VALUES
-(1, 'zidanemagaba', 'lastzidanemagaba@gmail.com', '$2y$10$bc5hcRodp/6AzpLGiB/Jg.biLJUK8VKhtuGbWqAG6SnGH6pJCLeqe', '3', '2022-02-14 05:54:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-14 12:49:58'),
-(3, 'maurel', 'maurel@gmail.com', '$2y$10$qsQ1uLe.20.m7PVj4dnSK.E8S/KZS.TcGHcVcBb.YOBZ.oJEBbaH2', '3', '2022-02-14 12:18:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(1, 'zidanemagaba', 'lastzidanemagaba@gmail.com', '$2y$10$bc5hcRodp/6AzpLGiB/Jg.biLJUK8VKhtuGbWqAG6SnGH6pJCLeqe', '1', '2022-02-14 05:54:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-14 12:49:58'),
+(3, 'maurel', 'maurel@gmail.com', '$2y$10$qsQ1uLe.20.m7PVj4dnSK.E8S/KZS.TcGHcVcBb.YOBZ.oJEBbaH2', '2', '2022-02-14 12:18:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-15 14:21:37'),
+(4, 'rolog', 'rolog@gmail.com', '$2y$10$7bVwi6nkxIs7M4FtBP2z5e2sZDp414zNYg6.lG9WvkMung4HGsLWC', '3', '2022-02-15 14:21:26', NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-15 14:27:22', '2022-02-15 14:27:22'),
+(5, 'sayang', 'sayang@gmail.com', '$2y$10$znHiqxfVUyb6vEJcsujd1OPnQWG6q2Ig0sGcQU76nAGWUs.dhYlhS', '2', '2022-02-15 15:00:02', NULL, NULL, NULL, NULL, 0, NULL, '2022-02-15 15:00:55', '2022-02-15 15:00:55');
 
 -- --------------------------------------------------------
 
@@ -702,7 +705,7 @@ ALTER TABLE `kendaraan`
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `master_alokasibbm`
@@ -756,7 +759,7 @@ ALTER TABLE `spbus`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `user_roles`
