@@ -34,7 +34,9 @@ class Auth extends BaseController
         $user = $query->getRow();
         if($user){
             if(password_verify($post['user_pass'], $user->user_pass)){
-                $params= ['user_id' => $user->user_id];
+                $params= ['user_id' => $user->user_id,
+                          'user_role' => $user->user_role,
+                ];
                 session()->set($params);
                 $model = new UserModel();
                 $data = array(

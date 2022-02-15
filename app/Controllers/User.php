@@ -12,7 +12,7 @@ class User extends BaseController
         $model = new UserModel();
         $resultUser = $model->tampil_User();
         $resultRole = $model->tampil_Role();
-        $data['getUser'] = $model->getUser();
+        $data['getUser'] = $model->findAll();
         //$data['groupsUser'] = $resultUser;
         $data['groupsrole'] = $resultRole;
         echo view('header_view',$data);
@@ -44,7 +44,7 @@ class User extends BaseController
     {
         $model = new UserModel();
         $id = $this->request->getPost('user_id');
-        $getUser = $model->deleteUser($id);
+        $getUser = $model->delete($id);
         if(isset($getUser))
         {
             echo '<script>

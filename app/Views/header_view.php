@@ -59,7 +59,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Data
+                Master
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -67,13 +67,35 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Data</span>
+                    <span>Master</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Data</h6>
+                        <h6 class="collapse-header">Master</h6>
                         <a class="collapse-item" href="<?= base_url('AlokasiBBM');?>">Alokasi BBM</a>
+                        <a class="collapse-item" href="<?= base_url('Satker');?>">Satker</a>
                         <a class="collapse-item" href="<?= base_url('Kendaraan');?>">Kendaraan</a>
+                        <a class="collapse-item" href="<?= base_url('SPBU');?>">SPBU</a>
+                        <a class="collapse-item" href="<?= base_url('User');?>">User</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Data
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo1"
+                    aria-expanded="true" aria-controls="collapseTwo1">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Data</span>
+                </a>
+                <div id="collapseTwo1" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Data</h6>
                         <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kartu</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Ranjen</a>
@@ -82,8 +104,6 @@
                             <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Master</a>
                             <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Jabatan</a>
                         </div>
-                        <a class="collapse-item" href="<?= base_url('SPBU');?>">SPBU</a>
-                        <a class="collapse-item" href="<?= base_url('User');?>">User</a>
                     </div>
                 </div>
             </li>
@@ -91,16 +111,18 @@
             
             <!-- Divider -->
             <hr class="sidebar-divider">
+            
 
             <!-- Heading -->
-            <div class="sidebar-heading">
+            <?php if(session()->user_role == 3 ) : ?>
+                <div class="sidebar-heading">
                 Laporan
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo2"
-                    aria-expanded="true" aria-controls="collapseTwo">
+                    aria-expanded="true" aria-controls="collapseTwo2">
                     <i class="fas fa-fw fa-briefcase"></i>
                     <span>Laporan</span>
                 </a>
@@ -121,6 +143,8 @@
             </li>
 
             <hr class="sidebar-divider">
+                <?php endif; ?>
+            
 
             <!-- Heading -->
             <li class="nav-item">

@@ -4,12 +4,12 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <center><h1 class="h3 mb-2 text-gray-800">Data User</h1></center>
+                    <center><h1 class="h3 mb-2 text-gray-800">Master User</h1></center>
                     <center><button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModalUser">Tambah Data</button></center>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Data User</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Master User</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -27,27 +27,27 @@
                                     <tbody>
                                     <?php $no=1; foreach($getUser as $isi){?>
                             <tr>
-                                <?php if ($isi['user_role'] == 1) 
+                                <?php if ($isi->user_role == 1) 
                                 {
                                     $role = 'User';
                                 }
-                                else if ($isi['user_role'] == 2) 
+                                else if ($isi->user_role == 2) 
                                 {
                                     $role = 'Admin';
                                 }
-                                else if ($isi['user_role'] == 3) 
+                                else if ($isi->user_role == 3) 
                                 {
                                     $role = 'SuperAdmin';
                                 }
                                 ?>
                                 <td><center><?= $no;?></center></td>
-                                <td><center><?= $isi['user_nama'];?></center></td>
-                                <td><center><?= $isi['user_email'];?></center></td>
+                                <td><center><?= $isi->user_nama;?></center></td>
+                                <td><center><?= $isi->user_email;?></center></td>
                                 <td><center><?= $role;?></center></td>
-                                <td><center><?= $isi['user_created_at'];?></center></td>
+                                <td><center><?= $isi->user_created_at;?></center></td>
                                 <td>
-                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-user_id="<?= $isi['user_id'];?>" data-user_nama="<?= $isi['user_nama'];?>" data-user_email="<?= $isi['user_email'];?>" data-user_role="<?= $isi['user_role'];?>">Edit</a></center>
-                                    <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-user_id="<?= $isi['user_id'];?>">Delete</a></center>
+                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-user_id="<?= $isi->user_id;?>" data-user_nama="<?= $isi->user_nama;?>" data-user_email="<?= $isi->user_email;?>" data-user_role="<?= $isi->user_role;?>">Edit</a></center>
+                                    <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-user_id="<?= $isi->user_id;?>">Delete</a></center>
                                 </td>
                             </tr>
                         <?php $no++;}?>

@@ -84,6 +84,18 @@
 
         $(document).on('click', '.btn-edit', function(){
             // get data from button edit
+            const msat_id = $(this).data('msat_id');
+            const msat_nama = $(this).data('msat_nama');
+            
+            // Set data to Form Edit
+            $('.msat_id').val(msat_id);
+            $('.msat_nama').val(msat_nama);
+            // Call Modal Edit
+            $('#editModalSatker').modal('show');
+        });
+
+        $(document).on('click', '.btn-edit', function(){
+            // get data from button edit
             const ran_id_bbm  = $(this).data('ran_id_bbm');
             const ran_total_bbm = $(this).data('ran_total_bbm');
             const ran_updated_at = $(this).data('ran_updated_at');
@@ -150,6 +162,14 @@
             $('.id_spbu').val(id_spbu);
             // Call Modal Edit
             $('#deleteModalSPBU').modal('show');
+        });
+        $(document).on('click', '.btn-delete', function(){
+            // get data from button edit
+            const msat_id  = $(this).data('msat_id');
+            // Set data to Form Edit
+            $('.msat_id').val(msat_id);
+            // Call Modal Edit
+            $('#deleteModalSatker').modal('show');
         });
         $(document).on('click', '.btn-delete', function(){
             // get data from button edit
@@ -292,7 +312,36 @@
            ],
     } );
 
-    
+    $('#tableSatker').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [ 
+			{
+			    extend: 'print',
+			    text: 'Print',
+			    messageTop: 'Daftar Satker',
+			    title: 'Daftar Satker',
+			    exportOptions: {
+				   
+				    columns: [ 0, 1]
+			    },
+			   
+		   },
+           {
+                extend: 'pdf',
+                text: 'Pdf',
+                exportOptions: {
+                columns: [1,2]
+            }
+            },
+            {
+                extend: 'excel',
+                text: 'Excel',
+                exportOptions: {
+                columns: [1,2]
+            }
+            }
+           ],
+    } );
 
     });
 

@@ -4,27 +4,31 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <center><h1 class="h3 mb-2 text-gray-800">Master Alokasi BBM</h1></center>
+                    <center><h1 class="h3 mb-2 text-gray-800">Master Satker</h1></center>
+                    <center><button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModalSatker">Tambah Data</button></center>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Master Alokasi BBM</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Master Satker</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="tableAlokasiBBM" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="tableSatker" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th><center>Jumlah BBM</center></th>
+                                            <th><center>No</center></th>
+                                            <th><center>Nama Satker</center></th>
                                             <th><center>Action</center></th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                    <?php $no=1; foreach($gettotalbbm as $isi){?>
+                                    <?php $no=1; foreach($getSatker as $isi){?>
                             <tr>
-                                <td><center><?= number_format($isi['ran_total_bbm'],"0",",","."). " Liter";?></center></td>
+                                <td><center><?= $no;?></center></td>
+                                <td><center><?= $isi['msat_nama'];?></center></td>
                                 <td>
-                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-ran_id_bbm ="<?= $isi['ran_id_bbm'];?>" data-ran_total_bbm="<?= $isi['ran_total_bbm'];?>">Edit</a></center>
+                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-msat_id ="<?= $isi['msat_id'];?>" data-msat_nama="<?= $isi['msat_nama'];?>">Edit</a></center>
+                                    <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-msat_id ="<?= $isi['msat_id'];?>">Delete</a></center>
                                 </td>
                             </tr>
                         <?php $no++;}?>
@@ -40,8 +44,8 @@
 
             </div>
 
-            <form method="post" action="<?= base_url('AlokasiBBM/delete');?>">
-                <div class="modal fade" id="deleteModalAlokasiBBM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form method="post" action="<?= base_url('Satker/delete');?>">
+                <div class="modal fade" id="deleteModalSatker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -56,7 +60,7 @@
                     
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="ran_id_bbm" class="ran_id_bbm">
+                        <input type="hidden" name="msat_id" class="msat_id">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                         <button type="submit" class="btn btn-primary">Yes</button>
                     </div>
@@ -65,8 +69,8 @@
                 </div>
             </form>
             <!-- End of Main Content -->
-            <form method="post" action="<?= base_url('AlokasiBBM/update');?>">
-                <div class="modal fade" id="editModalAlokasiBBM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <form method="post" action="<?= base_url('Satker/update');?>">
+                <div class="modal fade" id="editModalSatker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                     <div class="modal-header">
@@ -76,14 +80,14 @@
                         </button>
                     </div>
                     <div class="modal-body">      
-
-                         <div class="form-group">
-                            <label>Jumlah Alokasi BBM</label>
-                            <input type="text" class="form-control ran_total_bbm" name="ran_total_bbm" placeholder="Jumlah Alokasi BBM"required>
+                        <div class="form-group">
+                            <label>Nama Satker</label>
+                            <input type="text" class="form-control msat_nama" name="msat_nama" placeholder="Nama Satker">
                         </div>
+
                     </div>
                     <div class="modal-footer">
-                        <input type="hidden" name="ran_id_bbm" class="ran_id_bbm">
+                        <input type="hidden" name="msat_id" class="msat_id">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn btn-primary">Update</button>
                     </div>
@@ -91,9 +95,9 @@
                 </div>
                 </div>
             </form>
-            <!--  
-    <form method="post" action="<?= base_url('AlokasiBBM/add');?>">
-        <div class="modal fade" id="addModalAlokasiBBM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <!-- Footer -->
+    <form method="post" action="<?= base_url('Satker/add');?>">
+        <div class="modal fade" id="addModalSatker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -105,10 +109,9 @@
                     <div class="modal-body">
 
                         <div class="form-group">
-                            <label>Jumlah Alokasi BBM</label>
-                            <input type="text" class="form-control" name="ran_total_bbm" placeholder="Jumlah Alokasi BBM"required>
+                            <label>Nama Satker</label>
+                            <input type="text" class="form-control" name="msat_nama" placeholder="Nama Satker">
                         </div>
-                        
                     </div>
                     
                     <div class="modal-footer">
@@ -119,26 +122,11 @@
             </div>
         </div>
     </form>
-    -->
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
+    
+   
+
+            
     
    
