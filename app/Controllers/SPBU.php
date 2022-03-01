@@ -22,11 +22,11 @@ class SPBU extends BaseController
     {
         $model = new SPBU_model;
         $data = array(
-            'spbu_nama' => strtoupper($this->request->getPost('spbu_nama')),
-            'spbu_kode'         => strtoupper($this->request->getPost('spbu_kode')),
-            'spbu_wilayah'  => strtoupper($this->request->getPost('spbu_wilayah')),
-            'spbu_alamat'  => strtoupper($this->request->getPost('spbu_alamat')),
-            'spbu_kerjasama'  => strtoupper($this->request->getPost('spbu_kerjasama'))
+            'spbu_nama' => ($this->request->getPost('spbu_nama')),
+            'spbu_kode'         => ($this->request->getPost('spbu_kode')),
+            'spbu_wilayah'  => ($this->request->getPost('spbu_wilayah')),
+            'spbu_alamat'  => ($this->request->getPost('spbu_alamat')),
+            'spbu_kerjasama'  => ($this->request->getPost('spbu_kerjasama'))
         );
         $model->saveSPBU($data);
         echo '<script>
@@ -61,11 +61,11 @@ class SPBU extends BaseController
         $model = new SPBU_model();
         $id = $this->request->getPost('spbu_id');
         $data = array(
-            'spbu_nama' => strtoupper($this->request->getPost('spbu_nama')),
-            'spbu_kode'         => strtoupper($this->request->getPost('spbu_kode')),
-            'spbu_wilayah'  => strtoupper($this->request->getPost('spbu_wilayah')),
-            'spbu_alamat'  => strtoupper($this->request->getPost('spbu_alamat')),
-            'spbu_kerjasama'  => strtoupper($this->request->getPost('spbu_kerjasama'))
+            'spbu_nama' => ($this->request->getPost('spbu_nama')),
+            'spbu_kode'         => ($this->request->getPost('spbu_kode')),
+            'spbu_wilayah'  => ($this->request->getPost('spbu_wilayah')),
+            'spbu_alamat'  => ($this->request->getPost('spbu_alamat')),
+            'spbu_kerjasama'  => ($this->request->getPost('spbu_kerjasama'))
         );
         $kondisi =  $model->updateSPBU($data, $id);
         if(isset($kondisi))
