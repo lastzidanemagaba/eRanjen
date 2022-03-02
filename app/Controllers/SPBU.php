@@ -3,13 +3,13 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\SPBU_model;
+use App\Models\SPBUModel;
 
 class SPBU extends BaseController
 {
     public function index()
     {
-        $model = new SPBU_model;
+        $model = new SPBUModel();
         $resultspbu = $model->tampil_spbu();
         $data['getSPBU'] = $model->getSPBU();
         $data['groupsspbu'] = $resultspbu;
@@ -20,7 +20,7 @@ class SPBU extends BaseController
 
     public function add()
     {
-        $model = new SPBU_model;
+        $model = new SPBUModel();
         $data = array(
             'spbu_nama' => ($this->request->getPost('spbu_nama')),
             'spbu_kode'         => ($this->request->getPost('spbu_kode')),
@@ -38,7 +38,7 @@ class SPBU extends BaseController
 
     public function delete()
     {
-        $model = new SPBU_model();
+        $model = new SPBUModel();
         $id = $this->request->getPost('spbu_id');
         $getSPBU = $model->deleteSPBU($id);
         if(isset($getSPBU))
@@ -57,8 +57,9 @@ class SPBU extends BaseController
         }
     }
 
-    public function update(){
-        $model = new SPBU_model();
+    public function update()
+    {
+        $model = new SPBUModel();
         $id = $this->request->getPost('spbu_id');
         $data = array(
             'spbu_nama' => ($this->request->getPost('spbu_nama')),

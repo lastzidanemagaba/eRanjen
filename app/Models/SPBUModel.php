@@ -2,7 +2,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
  
-class SPBU_model extends Model
+class SPBUModel extends Model
 {
     protected $tablespbu = 'spbus';
 

@@ -2,7 +2,7 @@
 namespace App\Models;
 use CodeIgniter\Model;
  
-class Kendaraan_model extends Model
+class LaporanBulananModel extends Model
 {
     protected $tablekendaraan = 'kendaraan'; 
     protected $tablemaster_bbm_jenis = 'master_bbm_jenis'; 
@@ -24,8 +24,8 @@ class Kendaraan_model extends Model
         }   
     }
 
- 
-    function join2table(){
+    public function tampilwithmaster()
+    {
         $db = \Config\Database::connect();
         $builder = $db->table('kendaraan');
         $builder->select('kendaraan.ran_id,kendaraan.ran_nopol,master_bbm_jenis.mbj_id ,master_bbm_jenis.mbj_bbmnama as ran_bbm_jenis,master_ran_jen.mrj_id,master_ran_jen.mrj_nama as ran_jen,master_ran_tipe.mrt_id,master_ran_tipe.mrt_nama as ran_tipe,master_satker.msat_id,master_satker.msat_nama as ran_satker,master_kondisi.mkon_id ,master_kondisi.mkon_nama as ran_kondisi,master_wilayah.mwil_id,master_wilayah.mwil_nama as ran_wilayah,ran_liter');
@@ -36,8 +36,7 @@ class Kendaraan_model extends Model
         $builder->join('master_wilayah', 'master_wilayah.mwil_id  = kendaraan.ran_wilayah','left');
         $builder->join('master_kondisi', 'master_kondisi.mkon_id  = kendaraan.ran_kondisi','left');
         return $builder->get()->getResultArray();  
-        
-     }
+    }
 
      public function tampil_kondisi(){
         $db = \Config\Database::connect();
@@ -88,8 +87,6 @@ class Kendaraan_model extends Model
         return $builder->get()->getResultArray();
     }
     
-
-
     public function tampil_kendaraan(){
         $db = \Config\Database::connect();
         $builder = $this->db->table($this->tablekendaraan);
@@ -113,5 +110,7 @@ class Kendaraan_model extends Model
         $query = $this->db->table($this->tablekendaraan)->delete(array('ran_id' => $id));
         return $query;
     } 
+
+    
 
 }

@@ -12,6 +12,4 @@ class Dashboard extends BaseController
         echo view('view_dashboard');
         echo view('footer_view');
     }
-
-
 }

@@ -27,7 +27,6 @@ class Satker extends BaseController
                 alert("Sukses Tambah Data Satker");
                 window.location="'.base_url('Satker').'"
             </script>';
-
     }
 
     public function delete()
@@ -41,9 +40,7 @@ class Satker extends BaseController
                     alert("Hapus Data Sukses");
                     window.location="'.base_url('Satker').'"
                 </script>';
-
         }else{
-
             echo '<script>
                     alert("Hapus Gagal !, ID Satker '.$id.' Tidak ditemukan");
                     window.location="'.base_url('Satker').'"
@@ -51,7 +48,8 @@ class Satker extends BaseController
         }
     }
 
-    public function update(){
+    public function update()
+    {
         $model = new SatkerModel();
         $id = $this->request->getPost('msat_id');
         $data = array(
@@ -64,9 +62,7 @@ class Satker extends BaseController
                     alert("Edit Data Sukses");
                     window.location="'.base_url('Satker').'"
                 </script>';
-
         }else{
-
             echo '<script>
                     alert("Edit Gagal !, ID Satker '.$id.' Tidak ditemukan");
                     window.location="'.base_url('Satker').'"

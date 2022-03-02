@@ -3,14 +3,13 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Models\Kendaraan_model;
+use App\Models\KendaraanModel;
 
 class Kendaraan extends BaseController
 {
     public function index()
     {
-        
-        $model = new Kendaraan_model;
+        $model = new KendaraanModel();
         $resultbbm = $model->tampil_bbm();
         $resultkendaraan = $model->tampil_kendaraan();
         $resultranjen = $model->tampil_ranjen();
@@ -18,7 +17,7 @@ class Kendaraan extends BaseController
         $resultsatker = $model->tampil_satker();
         $resultwilayahtugas = $model->tampil_wilayahtugas();
         $resultspbu = $model->tampil_spbu();
-        $resultall = $model->join2table();
+        $resultall = $model->tampilwithmaster();
         $resultkondisi = $model->tampil_kondisi();
         $data['groupskondisi'] = $resultkondisi;
         $data['groupsall'] = $resultall;
@@ -35,10 +34,9 @@ class Kendaraan extends BaseController
         echo view('footer_view',$data);
     }
 
-
     public function delete()
     {
-        $model = new Kendaraan_model();
+        $model = new KendaraanModel();
         $id = $this->request->getPost('ran_id');
         $getSPBU = $model->deleteKendaraan($id);
         if(isset($getSPBU))
@@ -47,9 +45,7 @@ class Kendaraan extends BaseController
                     alert("Hapus Data Sukses");
                     window.location="'.base_url('Kendaraan').'"
                 </script>';
-
         }else{
-
             echo '<script>
                     alert("Hapus Gagal !, ID Kendaraan '.$id.' Tidak ditemukan");
                     window.location="'.base_url('Kendaraan').'"
@@ -58,7 +54,7 @@ class Kendaraan extends BaseController
     }
     public function add()
     {
-        $model = new Kendaraan_model;
+        $model = new KendaraanModel();
         $data = array(
             'ran_nopol' => strtoupper($this->request->getPost('ran_nopol')),
             'ran_bbm_jenis' => strtoupper($this->request->getPost('mbj_id')),
@@ -74,11 +70,11 @@ class Kendaraan extends BaseController
                 alert("Sukses Tambah Data Kendaraan");
                 window.location="'.base_url('Kendaraan').'"
             </script>';
-
     }
 
-    public function update(){
-        $model = new Kendaraan_model();
+    public function update()
+    {
+        $model = new KendaraanModel();
         $id = $this->request->getPost('ran_id');
         $data = array(
             'ran_nopol' => strtoupper($this->request->getPost('ran_nopol')),
@@ -98,15 +94,11 @@ class Kendaraan extends BaseController
                     alert("Edit Data Sukses");
                     window.location="'.base_url('Kendaraan').'"
                 </script>';
-
         }else{
-
             echo '<script>
                     alert("Edit Gagal !, ID Kendaraan '.$id.' Tidak ditemukan");
                     window.location="'.base_url('Kendaraan').'"
                 </script>';
         }
     }
-
-   
 }

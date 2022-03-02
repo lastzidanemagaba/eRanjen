@@ -58,6 +58,7 @@
             <hr class="sidebar-divider">
 
             <!-- Heading -->
+            <?php if(session()->user_role == 3 || session()->user_role == 2) : ?>
             <div class="sidebar-heading">
                 Master
             </div>
@@ -76,12 +77,16 @@
                         <a class="collapse-item" href="<?= base_url('Satker');?>">Satker</a>
                         <a class="collapse-item" href="<?= base_url('Kendaraan');?>">Kendaraan</a>
                         <a class="collapse-item" href="<?= base_url('SPBU');?>">SPBU</a>
+                        <?php if(session()->user_role == 3) : ?>
                         <a class="collapse-item" href="<?= base_url('User');?>">User</a>
+                        <?php endif; ?>
                     </div>
                 </div>
             </li>
             <hr class="sidebar-divider">
+            <?php endif; ?>
             <!-- Heading -->
+            
             <div class="sidebar-heading">
                 Data
             </div>
@@ -99,10 +104,10 @@
                         <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kartu</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Ranjen</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Kupon</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Kupon Dukungan</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Master</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Jabatan</a>
+                            <a class="dropdown-item" href="<?= base_url('KartuKupon');?>">Kupon</a>
+                            <a class="dropdown-item" href="<?= base_url('KartuDukungan');?>">Kupon Dukungan</a>
+                            <a class="dropdown-item" href="<?= base_url('CadanganMaster');?>">Cadangan Master</a>
+                            <a class="dropdown-item" href="<?= base_url('CadanganJabatan');?>">Cadangan Jabatan</a>
                         </div>
                     </div>
                 </div>
@@ -114,38 +119,37 @@
             
 
             <!-- Heading -->
-            <?php if(session()->user_role == 3 ) : ?>
+            <?php if(session()->user_role == 3 || session()->user_role == 2) : ?>
                 <div class="sidebar-heading">
                 Laporan
             </div>
-
+            <!-- Nav Item - Pages Collapse Menu -->
+            <!-- Heading -->
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo2"
                     aria-expanded="true" aria-controls="collapseTwo2">
-                    <i class="fas fa-fw fa-briefcase"></i>
+                    <i class="fas fa-fw fa-cog"></i>
                     <span>Laporan</span>
                 </a>
                 <div id="collapseTwo2" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Laporan</h6>
-                        <a class="collapse-item" href="<?= base_url('SPBU');?>">Kendaraan</a>
-                        <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kartu</a>
+                        <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Laporan</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Ranjen</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Kupon</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Kupon Dukungan</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Master</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Cadangan Jabatan</a>
+                            <a class="dropdown-item" href="<?= base_url('LaporanTahunan');?>">Tahunan</a>
+                            <a class="dropdown-item" href="<?= base_url('LaporanBulanan');?>">Bulanan</a>
+                            <a class="dropdown-item" href="<?= base_url('LaporanHarian');?>">Harian</a>
+                            <a class="dropdown-item" href="<?= base_url('LaporanSatker');?>">Satker</a>
                         </div>
                     </div>
                 </div>
             </li>
-
-            <hr class="sidebar-divider">
-                <?php endif; ?>
+            <!-- Nav Item - Utilities Collapse Menu -->
             
-
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+            <?php endif; ?>
             <!-- Heading -->
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('auth/logout');?>">

@@ -154,11 +154,6 @@
                                 <label>Jumlah Liter</label>
                                 <input type="text" class="form-control ran_liter" name="ran_liter" required>
                         </div>
-                        
-                        
-
-                    
-                    
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="ran_id" class="ran_id">
@@ -170,90 +165,86 @@
                 </div>
             </form>
             <!-- Footer -->
-    <form method="post" action="<?= base_url('Kendaraan/add');?>">
-        <div class="modal fade" id="addModalKendaraan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+            <form method="post" action="<?= base_url('Kendaraan/add');?>">
+                <div class="modal fade" id="addModalKendaraan" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nopol</label>
+                                    <input type="text" class="form-control" name="ran_nopol" placeholder="Nopol"required>
+                                </div>
 
-                        <div class="form-group">
-                            <label>Nopol</label>
-                            <input type="text" class="form-control" name="ran_nopol" placeholder="Nopol"required>
-                        </div>
+                                <div class="form-group">
+                                    <label>Jenis BBM</label>
+                                    <select name="mbj_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                        <?php foreach($groupsbbm as $each){ ?><option value="<?php echo $each["mbj_id"]; ?>"><?php echo $each["mbj_bbmnama"]; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Ranjen</label>
+                                    <select name="mrj_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                        <?php foreach($groupsranjen as $eachx){ ?><option value="<?php echo $eachx["mrj_id"]; ?>"><?php echo $eachx["mrj_nama"]; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
 
-                        <div class="form-group">
-                            <label>Jenis BBM</label>
-                            <select name="mbj_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                <?php foreach($groupsbbm as $each){ ?><option value="<?php echo $each["mbj_id"]; ?>"><?php echo $each["mbj_bbmnama"]; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Ranjen</label>
-                            <select name="mrj_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                <?php foreach($groupsranjen as $eachx){ ?><option value="<?php echo $eachx["mrj_id"]; ?>"><?php echo $eachx["mrj_nama"]; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
+                                <div class="form-group">
+                                    <label>Tipe Kendaraan</label>
+                                    <select name="mrt_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                        <?php foreach($groupstipekendaraan as $eachxx){ ?><option value="<?php echo $eachxx["mrt_id"]; ?>"><?php echo $eachxx["mrt_nama"]; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>
 
-                        <div class="form-group">
-                            <label>Tipe Kendaraan</label>
-                            <select name="mrt_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                <?php foreach($groupstipekendaraan as $eachxx){ ?><option value="<?php echo $eachxx["mrt_id"]; ?>"><?php echo $eachxx["mrt_nama"]; ?></option>
-                                <?php } ?>
-                            </select>
+                                <div class="form-group">
+                                    <label>Satker</label>
+                                    <select name="msat_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                        <?php foreach($groupssatker as $eachxxx){ ?><option value="<?php echo $eachxxx["msat_id"]; ?>"><?php echo $eachxxx["msat_nama"]; ?></option>
+                                        <?php } ?>
+                                    </select>
+                                </div>     
+                                <div class="form-group">
+                                    <label>Kondisi</label>
+                                    <select name="mkon_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                            <?php foreach($groupskondisi as $eachxxxxdea){ ?><option value="<?php echo $eachxxxxdea["mkon_id"]; ?>"><?php echo $eachxxxxdea["mkon_nama"]; ?></option>
+                                            <?php } ?>
+                                    </select>
+                                </div>       
+                                <div class="form-group">
+                                    <label>Wilayah Tugas</label>
+                                    <select name="mwil_id" class="form-control" required>
+                                        <option value="">-Pilih-</option>
+                                            <?php foreach($groupswilayahtugas as $eachxxxx){ ?><option value="<?php echo $eachxxxx["mwil_id"]; ?>"><?php echo $eachxxxx["mwil_nama"]; ?></option>
+                                            <?php } ?>
+                                    </select>
+                                </div>        
+                                <div class="form-group">
+                                    <label>Jumlah Liter</label>
+                                    <input type="number" class="form-control" name="ran_liter" placeholder="Jumlah Liter">
+                                </div>        
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                                <button type="submit" class="btn btn-primary">Simpan</button>
+                            </div>
                         </div>
-
-                        <div class="form-group">
-                            <label>Satker</label>
-                            <select name="msat_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                <?php foreach($groupssatker as $eachxxx){ ?><option value="<?php echo $eachxxx["msat_id"]; ?>"><?php echo $eachxxx["msat_nama"]; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>     
-                        <div class="form-group">
-                            <label>Kondisi</label>
-                            <select name="mkon_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                    <?php foreach($groupskondisi as $eachxxxxdea){ ?><option value="<?php echo $eachxxxxdea["mkon_id"]; ?>"><?php echo $eachxxxxdea["mkon_nama"]; ?></option>
-                                    <?php } ?>
-                            </select>
-                        </div>       
-                        <div class="form-group">
-                            <label>Wilayah Tugas</label>
-                            <select name="mwil_id" class="form-control" required>
-                                <option value="">-Pilih-</option>
-                                    <?php foreach($groupswilayahtugas as $eachxxxx){ ?><option value="<?php echo $eachxxxx["mwil_id"]; ?>"><?php echo $eachxxxx["mwil_nama"]; ?></option>
-                                    <?php } ?>
-                            </select>
-                        </div>        
-                        <div class="form-group">
-                            <label>Jumlah Liter</label>
-                            <input type="number" class="form-control" name="ran_liter" placeholder="Jumlah Liter">
-                        </div>        
-                        
-                             
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </div>
-            </div>
-        </div>
-    </form>
+            </form>
 
 
     

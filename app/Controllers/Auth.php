@@ -5,7 +5,6 @@ use App\Models\UserModel;
 
 class Auth extends BaseController
 {
-
     public function __construct()
     {
         $this->userModel = new UserModel();
@@ -41,9 +40,9 @@ class Auth extends BaseController
                 $model = new UserModel();
                 $data = array(
                     'logak_tgl' => date('Y-m-d H:i:s'),
-                    'logak_ket'         => "Login Ke Aplikasi Web",
-                    'logak_user'  => $params,
-                    'logak_ip'  => $this->get_client_ip()
+                    'logak_ket'         => "Login Ke Aplikasi Web e-Ranjen",
+                    'logak_user'  => $params['user_id'],
+                    'logak_ip'  => $this->request->getIPAddress()
                 );
                 $model->saveUserLog($data);
                 return redirect()->to('Dashboard');
@@ -64,17 +63,5 @@ class Auth extends BaseController
         return redirect()->to('login');
     }
 
-    public function get_client_ip() {
-        if(!empty($_SERVER['HTTP_CLIENT_IP'])){
-            $ip=$_SERVER['HTTP_CLIENT_IP'];
-          }
-          elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
-            $ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-          }
-          else{
-            $ip=$_SERVER['REMOTE_ADDR'];
-          }
-          return $ip;
-    }
-
+    
 }

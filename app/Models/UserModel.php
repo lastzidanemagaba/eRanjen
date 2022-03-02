@@ -6,32 +6,28 @@ use CodeIgniter\Model;
 
 class UserModel extends Model
 {
-    protected $table      = 'users';
-    protected $tableuser_roles      = 'user_roles';
-    protected $tablelog_aktifitas      = 'log_aktifitas';
-    protected $primaryKey = 'user_id';
- 
-    protected $returnType     = 'object';
-    protected $useSoftDeletes = true;
- 
-    protected $allowedFields = ['user_nama','user_email','user_pass','user_created_at','user_deleted_by','user_deleted'];
- 
-    protected $useTimestamps = true;
-    protected $createdField  = 'user_created_at';
-    protected $updatedField  = 'user_updated_at';
-    protected $deletedField  = 'user_deleted_tgl';
-   
-
-
-
+    protected $table                    = 'users';
+    protected $tableuser_roles          = 'user_roles';
+    protected $tablelog_aktifitas       = 'log_aktifitas';
+    protected $primaryKey               = 'user_id';
+    protected $returnType               = 'object';
+    protected $useSoftDeletes           = true;
+    protected $allowedFields            = ['user_nama','user_email','user_pass','user_created_at','user_deleted_by','user_deleted'];
+    protected $useTimestamps            = true;
+    protected $createdField             = 'user_created_at';
+    protected $updatedField             = 'user_updated_at';
+    protected $deletedField             = 'user_deleted_tgl';
 
     public function getUser($id = false)
     {
         $db = \Config\Database::connect();
         $builder = $this->db->table($this->table);
-        if($id == false){
+        if($id == false)
+        {
             return $builder->get()->getResultArray();
-        }else{
+        }
+        else
+        {
             return $builder->getWhere(['user_id' => $id]);
         }   
     }
@@ -50,14 +46,14 @@ class UserModel extends Model
         return $builder->get()->getResultArray();
     }
 
-    
-
-    public function saveUser($data){
+    public function saveUser($data)
+    {
         $builder = $this->db->table($this->table);
         return $builder->insert($data);
     }
 
-    public function saveUserLog($data){
+    public function saveUserLog($data)
+    {
         $builder = $this->db->table($this->tablelog_aktifitas);
         return $builder->insert($data);
     }
@@ -73,7 +69,6 @@ class UserModel extends Model
         $query = $this->db->table($this->table)->delete(array('user_id' => $id));
         return $query;
     } 
-    
 }
 
 ?>

@@ -16,21 +16,6 @@ class AlokasiBBM extends BaseController
         echo view('footer_view',$data);
     }
 
-    /*public function add()
-    {
-        $model = new AlokasiBBMModel();
-        $data = array(
-            'ran_total_bbm' => ($this->request->getPost('ran_total_bbm')),
-        );
-        $model->savetotalbbm($data);
-        echo '<script>
-                alert("Sukses Tambah Data");
-                window.location="'.base_url('AlokasiBBM').'"
-            </script>';
-
-    }
-    */
-
     public function delete()
     {
         $model = new AlokasiBBMModel();
@@ -52,7 +37,8 @@ class AlokasiBBM extends BaseController
         }
     }
 
-    public function update(){
+    public function update()
+    {
         $model = new AlokasiBBMModel();
         $id = $this->request->getPost('ran_id_bbm');
         $data = array(
@@ -67,14 +53,11 @@ class AlokasiBBM extends BaseController
                     alert("Edit Data Sukses");
                     window.location="'.base_url('AlokasiBBM').'"
                 </script>';
-
         }else{
-
             echo '<script>
                     alert("Edit Gagal !, ID '.$id.' Tidak ditemukan");
                     window.location="'.base_url('AlokasiBBM').'"
                 </script>';
         }
     }
-    
 }

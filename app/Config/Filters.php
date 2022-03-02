@@ -80,6 +80,16 @@ class Filters extends BaseConfig
                 'User/*',
                 'AlokasiBBM',
                 'AlokasiBBM/*',
+                'Satker',
+                'Satker/*',
+                'LaporanTahunan',
+                'LaporanTahunan/*',
+                'LaporanBulanan',
+                'LaporanBulanan/*',
+                'LaporanHarian',
+                'LaporanHarian/*',
+                'LaporanSatker',
+                'LaporanSatker/*',
             ]
         ]
     ];

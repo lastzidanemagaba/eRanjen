@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2022 at 01:23 PM
+-- Generation Time: Mar 02, 2022 at 11:17 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -122,11 +122,16 @@ CREATE TABLE `log_aktifitas` (
 --
 
 INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`, `logak_ip`) VALUES
-(1, '2022-02-14 14:56:05', 'Login Ke Aplikasi Web', '1', ''),
-(2, '2022-02-14 14:57:25', 'Login Ke Aplikasi Web', '1', '::1'),
-(3, '2022-02-14 14:59:43', 'Login Ke Aplikasi Web', '1', 'UNKNOWN'),
-(4, '2022-02-14 17:02:00', 'Login Ke Aplikasi Web', '3', '::1'),
-(5, '2022-02-15 10:39:18', 'Login Ke Aplikasi Web', '3', '::1');
+(1, '2022-03-02 16:36:10', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(2, '2022-03-02 16:38:35', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(3, '2022-03-02 16:58:09', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(4, '2022-03-02 17:01:00', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(5, '2022-03-02 17:04:56', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(6, '2022-03-02 17:07:58', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(7, '2022-03-02 17:08:14', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(8, '2022-03-02 17:12:15', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
+(9, '2022-03-02 17:12:30', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(10, '2022-03-02 17:12:45', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1');
 
 -- --------------------------------------------------------
 
@@ -147,7 +152,7 @@ CREATE TABLE `master_alokasibbm` (
 --
 
 INSERT INTO `master_alokasibbm` (`ran_id_bbm`, `ran_total_bbm`, `ran_updated_by`, `ran_updated_at`, `ran_deleted_by`) VALUES
-(1, 6000, 1, '2022-02-14 14:37:40', NULL);
+(1, 20000, 1, '2022-03-02 12:45:40', NULL);
 
 -- --------------------------------------------------------
 
@@ -565,10 +570,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_nama`, `user_email`, `user_pass`, `user_role`, `user_created_at`, `user_created_by`, `user_banned`, `user_banned_by`, `user_banned_tgl`, `user_deleted`, `user_deleted_by`, `user_deleted_tgl`, `user_updated_at`) VALUES
-(1, 'zidanemagaba', 'lastzidanemagaba@gmail.com', '$2y$10$bc5hcRodp/6AzpLGiB/Jg.biLJUK8VKhtuGbWqAG6SnGH6pJCLeqe', '1', '2022-02-14 05:54:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-14 12:49:58'),
-(3, 'maurel', 'maurel@gmail.com', '$2y$10$qsQ1uLe.20.m7PVj4dnSK.E8S/KZS.TcGHcVcBb.YOBZ.oJEBbaH2', '2', '2022-02-14 12:18:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-15 14:21:37'),
-(4, 'rolog', 'rolog@gmail.com', '$2y$10$7bVwi6nkxIs7M4FtBP2z5e2sZDp414zNYg6.lG9WvkMung4HGsLWC', '3', '2022-02-15 14:21:26', NULL, NULL, NULL, NULL, NULL, NULL, '2022-02-15 14:27:22', '2022-02-15 14:27:22'),
-(5, 'sayang', 'sayang@gmail.com', '$2y$10$znHiqxfVUyb6vEJcsujd1OPnQWG6q2Ig0sGcQU76nAGWUs.dhYlhS', '2', '2022-02-15 15:00:02', NULL, NULL, NULL, NULL, 0, NULL, '2022-02-15 15:00:55', '2022-02-15 15:00:55');
+(1, 'user', 'user@gmail.com', '$2y$10$VJcMMMCV3255Q65.hXdeauWCC4qeLFMdSx8rXZTPvdVg9kvKI8QKO', '1', '2022-03-02 16:32:50', NULL, NULL, NULL, '2022-03-02 10:32:50', 0, NULL, NULL, '2022-03-02 17:09:50'),
+(2, 'admin', 'admin@admin.com', '$2y$10$gblqqfn6HfqtM.4.5/VUDObspkwQkaa1GWlFoDA.ECs.pT6J/Zw1a', '2', '2022-03-02 17:10:01', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL),
+(3, 'superadmin', 'superadmin@superadmin', '$2y$10$BwEVIku07ISqB75XjIYgZuofE5KpNxeiRQW.gnk3p5KOtMuwynY.C', '3', '2022-03-02 17:10:16', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -705,7 +709,7 @@ ALTER TABLE `kendaraan`
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `master_alokasibbm`
@@ -759,7 +763,7 @@ ALTER TABLE `spbus`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user_roles`

@@ -1,0 +1,73 @@
+ERROR - 2022-03-02 10:20:35 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-03-02 10:20:35 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+#0 D:\xampp\htdocs\eRanjen\system\Database\BaseConnection.php(577): CodeIgniter\Database\BaseConnection->initialize()
+#1 D:\xampp\htdocs\eRanjen\system\Database\BaseBuilder.php(1588): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 D:\xampp\htdocs\eRanjen\system\Model.php(728): CodeIgniter\Database\BaseBuilder->getWhere(Array)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(32): CodeIgniter\Model->__call('getWhere', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-03-02 10:26:08 --> Operand should contain 1 column(s)
+CRITICAL - 2022-03-02 10:41:33 --> Undefined array key "mbj_id"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_laporantahunan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 48)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_laporantah...', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\LaporanTahunan.php(15): view('view_laporantah...', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanTahunan->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanTahunan))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-02 10:43:19 --> Undefined array key "mbj_id"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_laporantahunan.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 48)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_laporantah...', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\LaporanTahunan.php(33): view('view_laporantah...', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanTahunan->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanTahunan))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-02 12:27:57 --> Operand should contain 1 column(s)
+ERROR - 2022-03-02 16:14:47 --> Operand should contain 1 column(s)
+ERROR - 2022-03-02 16:16:39 --> Operand should contain 1 column(s)
+CRITICAL - 2022-03-02 16:19:09 --> Attempt to read property "user_id" on array
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read...', 'D:\\xampp\\htdocs...', 44)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-02 16:21:34 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 47)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-02 16:21:48 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 47)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-02 16:25:06 --> syntax error, unexpected token ";", expecting ")"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('auth/logout')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('auth/logout')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}

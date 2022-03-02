@@ -61,7 +61,8 @@ class User extends BaseController
         }
     }
 
-    public function update(){
+    public function update()
+    {
         $model = new UserModel();
         $id = $this->request->getPost('user_id');
         $data = array(
