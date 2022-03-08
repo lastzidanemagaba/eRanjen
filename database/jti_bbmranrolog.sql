@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 02, 2022 at 11:17 AM
+-- Generation Time: Mar 08, 2022 at 01:26 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `kartus` (
   `kartu_id` int(80) NOT NULL,
   `kartu_tag_no` varchar(80) NOT NULL,
-  `kartu_tipe` varchar(80) NOT NULL,
-  `kartu_ranjen_is` int(80) NOT NULL COMMENT '1 ranjen, 2 kupon dukungan, 3 cadangan master, 4 cadangan jabatan0 ranum, 1 ransus',
+  `kartu_tipe` int(11) NOT NULL COMMENT '1 ranum, 2 ransus',
+  `kartu_ranjen_is` int(11) NOT NULL COMMENT '1 ranjen, 2 kupon dukungan, 3 cadangan master, 4 cadangan jabatan',
   `kartu_kendaraan` varchar(80) NOT NULL,
   `kartu_banned` int(80) NOT NULL,
   `kartu_created_tgl` datetime(1) NOT NULL,
@@ -48,7 +48,8 @@ CREATE TABLE `kartus` (
 --
 
 INSERT INTO `kartus` (`kartu_id`, `kartu_tag_no`, `kartu_tipe`, `kartu_ranjen_is`, `kartu_kendaraan`, `kartu_banned`, `kartu_created_tgl`, `kartu_paired`, `kartu_paired_by`, `kartu_paired_tgl`, `kartu_deleted`, `kartu_deleted_by`, `kartu_deleted_tgl`) VALUES
-(1, '2B0HFAU', '2', 1, '1', 0, '2022-02-02 10:17:44.0', '1', '1', '2022-02-07 10:16:12.0', 0, '', '2022-02-02 10:16:18.0');
+(1, '2B0HFAU', 2, 1, '1', 0, '2022-02-02 10:17:44.0', '1', '1', '2022-02-07 10:16:12.0', 0, '', '2022-02-02 10:16:18.0'),
+(2, 'DFREA3', 1, 1, '', 0, '0000-00-00 00:00:00.0', '', '', '0000-00-00 00:00:00.0', 0, '', '0000-00-00 00:00:00.0');
 
 -- --------------------------------------------------------
 
@@ -101,7 +102,8 @@ INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran
 (4, 'CINTA-V1', '1', '2', '2', '19', '1', '1', '36262', '15', '15', '', '', NULL),
 (5, 'JUREH-01', '1', '2', '3', '21', '3', '3', '333', '17', '15', '', '', NULL),
 (7, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', '', '', NULL),
-(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', NULL, NULL, NULL);
+(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', NULL, NULL, NULL),
+(9, 'JOGJA-001', '2', '2', '6', '19', '3', '5', '123', '', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -131,7 +133,11 @@ INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`,
 (7, '2022-03-02 17:08:14', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
 (8, '2022-03-02 17:12:15', 'Login Ke Aplikasi Web e-Ranjen', '1', '::1'),
 (9, '2022-03-02 17:12:30', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
-(10, '2022-03-02 17:12:45', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1');
+(10, '2022-03-02 17:12:45', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(11, '2022-03-04 15:46:50', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(12, '2022-03-07 10:33:34', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(13, '2022-03-07 15:35:30', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(14, '2022-03-08 10:05:07', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1');
 
 -- --------------------------------------------------------
 
@@ -192,6 +198,27 @@ INSERT INTO `master_kondisi` (`mkon_id`, `mkon_nama`) VALUES
 (1, 'BAIK'),
 (2, 'RUSAK RINGAN'),
 (3, 'RUSAK BERAT');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `master_ranjen_is`
+--
+
+CREATE TABLE `master_ranjen_is` (
+  `id_ranjen_is` int(11) NOT NULL,
+  `nama_ranjen_is` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `master_ranjen_is`
+--
+
+INSERT INTO `master_ranjen_is` (`id_ranjen_is`, `nama_ranjen_is`) VALUES
+(1, 'Ranjen'),
+(2, 'Kupon Dukungan'),
+(3, 'Cadangan Master'),
+(4, 'Cadangan Jabatan');
 
 -- --------------------------------------------------------
 
@@ -642,6 +669,12 @@ ALTER TABLE `master_kondisi`
   ADD PRIMARY KEY (`mkon_id`);
 
 --
+-- Indexes for table `master_ranjen_is`
+--
+ALTER TABLE `master_ranjen_is`
+  ADD PRIMARY KEY (`id_ranjen_is`);
+
+--
 -- Indexes for table `master_ran_jen`
 --
 ALTER TABLE `master_ran_jen`
@@ -691,7 +724,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `kartus`
 --
 ALTER TABLE `kartus`
-  MODIFY `kartu_id` int(80) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `kartu_id` int(80) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kartu_trxs`
@@ -703,13 +736,13 @@ ALTER TABLE `kartu_trxs`
 -- AUTO_INCREMENT for table `kendaraan`
 --
 ALTER TABLE `kendaraan`
-  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ran_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `master_alokasibbm`
@@ -728,6 +761,12 @@ ALTER TABLE `master_bbm_jenis`
 --
 ALTER TABLE `master_kondisi`
   MODIFY `mkon_id` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `master_ranjen_is`
+--
+ALTER TABLE `master_ranjen_is`
+  MODIFY `id_ranjen_is` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `master_ran_jen`

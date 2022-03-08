@@ -21,7 +21,7 @@
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css" rel="stylesheet">
-
+    
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
@@ -103,11 +103,7 @@
                         <h6 class="collapse-header">Data</h6>
                         <a class="collapse-item" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kartu</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="<?= base_url('KartuRanjen');?>">Ranjen</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuKupon');?>">Kupon</a>
-                            <a class="dropdown-item" href="<?= base_url('KartuDukungan');?>">Kupon Dukungan</a>
-                            <a class="dropdown-item" href="<?= base_url('CadanganMaster');?>">Cadangan Master</a>
-                            <a class="dropdown-item" href="<?= base_url('CadanganJabatan');?>">Cadangan Jabatan</a>
+                            <a class="dropdown-item" href="<?= base_url('Kartu');?>">Kartu</a>
                         </div>
                     </div>
                 </div>

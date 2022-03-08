@@ -31,7 +31,9 @@
     <!-- Page level plugins -->
     <script src="vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    
 
+    
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
 
@@ -111,7 +113,7 @@
             $('#editModalAlokasiBBM').modal('show');
         });
         
-        // get Edit Kartu
+        // get Edit Kendaraan
         $(document).on('click', '.btn-edit', function(){
             // get data from button edit
             const ran_id = $(this).data('ran_id');
@@ -219,31 +221,17 @@
             }],
     } );
     $('#tableLaporanTahunan').DataTable( {
-        dom: 'Bfrtip',
-        buttons: [ 
-			{
-			    extend: 'print',
-			    text: 'Print',
-			    messageTop: 'Laporan Tahunan',
-			    title: 'Laporan Tahunan',
-			    exportOptions: {
-				   
-				    columns: [ 0, 1, 2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29]
-			    },
-			   
-		   },
-           {
-                extend: 'pdf',
-                text: 'Pdf',
-              
-            },
-            {
-                extend: 'excel',
-                text: 'Excel',
-            }
-           ],
+        
     } );
-    
+    $('#tableLaporanBulanan').DataTable( {
+        
+    } );
+    $('#tableLaporanHarian').DataTable( {
+        
+    } );
+    $('#tableLaporanSatker').DataTable( {
+        
+    } );
 
     $('#tableKendaraan').DataTable( {
         dom: 'Bfrtip',

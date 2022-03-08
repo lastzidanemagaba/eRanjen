@@ -1,5 +1,11 @@
 ## [Unreleased]
 
+## [3.0.3] - 2022-02-25
+  * Added: support for composer/pcre versions 2 and 3.
+
+## [3.0.2] - 2022-02-24
+  * Fixed: regression in 3.0.1 affecting Xdebug 2
+
 ## [3.0.1] - 2022-01-04
   * Fixed: error when calling `isXdebugActive` before class instantiation.
 
@@ -102,7 +108,9 @@
   * Break: the following class was renamed:
     - `Composer\XdebugHandler` -> `Composer\XdebugHandler\XdebugHandler`
 
-[Unreleased]: https://github.com/composer/xdebug-handler/compare/3.0.1...HEAD
+[Unreleased]: https://github.com/composer/xdebug-handler/compare/3.0.3...HEAD
+[3.0.2]: https://github.com/composer/xdebug-handler/compare/3.0.2...3.0.3
+[3.0.2]: https://github.com/composer/xdebug-handler/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/composer/xdebug-handler/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/composer/xdebug-handler/compare/2.0.3...3.0.0
 [2.0.3]: https://github.com/composer/xdebug-handler/compare/2.0.2...2.0.3

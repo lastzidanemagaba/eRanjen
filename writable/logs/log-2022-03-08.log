@@ -1,0 +1,90 @@
+CRITICAL - 2022-03-08 10:29:03 --> Undefined variable $groupsbbm
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_karturanjen.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 100)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_karturanje...', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\KartuRanjen.php(15): view('view_karturanje...', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\KartuRanjen->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KartuRanjen))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-08 10:35:09 --> Undefined variable $groupsbbm
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_karturanjen.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 100)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_karturanje...', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\KartuRanjen.php(15): view('view_karturanje...', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\KartuRanjen->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\KartuRanjen))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-08 10:44:09 --> Undefined variable $groupsbbm
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 100)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(15): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-08 11:15:14 --> Column 'kartu_tipe' cannot be null
+ERROR - 2022-03-08 11:17:21 --> Column 'kartu_tipe' cannot be null
+CRITICAL - 2022-03-08 11:49:55 --> Class "App\Controllers\UsersModel" not found
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanTahunan->export()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanTahunan))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-08 12:22:52 --> You must set the database table to be used with your query.
+#0 D:\xampp\htdocs\eRanjen\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\xampp\htdocs\eRanjen\system\Model.php(176): CodeIgniter\Model->builder()
+#2 D:\xampp\htdocs\eRanjen\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\LaporanBulanan.php(42): CodeIgniter\BaseModel->findAll()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanBulanan->export()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanBulanan))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-08 12:28:12 --> Class "App\Controllers\LaporanBulananModel" not found
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanHarian->export()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanHarian))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-08 14:33:20 --> You must set the database table to be used with your query.
+#0 D:\xampp\htdocs\eRanjen\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\xampp\htdocs\eRanjen\system\Model.php(176): CodeIgniter\Model->builder()
+#2 D:\xampp\htdocs\eRanjen\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\LaporanSatker.php(42): CodeIgniter\BaseModel->findAll()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanSatker->export()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanSatker))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-08 15:37:06 --> syntax error, unexpected variable "$column"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('LaporanSatker')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('LaporanSatker')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-08 15:38:37 --> syntax error, unexpected variable "$column"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('LaporanSatker')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('LaporanSatker')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}

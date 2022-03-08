@@ -5,6 +5,9 @@
 
                     <!-- Page Heading -->
                     <center><h1 class="h3 mb-2 text-gray-800">Laporan Bulanan</h1></center>
+                    <a href="<?= base_url('LaporanBulanan/export');?>" class="btn btn-success mb-2">
+                    <span class="fas fa-file-export"></span> Export
+                    </a>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -13,7 +16,7 @@
                         <div class="card-body">
                             <div class="table-responsive">
                             
-                                <table class="table table-bordered table-white" id="tableLaporanTahunan" width="100%" cellspacing="0">
+                                <table class="table table-bordered table-white" id="tableLaporanBulanan" width="100%" cellspacing="0">
                                 <thead>
                                         <tr>
                                         <th colspan="26" bgcolor="blue"><center>PERTAMAX</center></th>

@@ -4,6 +4,7 @@ use CodeIgniter\Model;
  
 class LaporanSatkerModel extends Model
 {
+    protected $table = 'kendaraan';
     protected $tablekendaraan = 'kendaraan'; 
     protected $tablemaster_bbm_jenis = 'master_bbm_jenis'; 
     protected $tablemaster_ran_jen = 'master_ran_jen'; 

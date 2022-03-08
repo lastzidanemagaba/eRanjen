@@ -4,6 +4,7 @@ use CodeIgniter\Model;
  
 class LaporanBulananModel extends Model
 {
+    protected $table = 'kendaraan';
     protected $tablekendaraan = 'kendaraan'; 
     protected $tablemaster_bbm_jenis = 'master_bbm_jenis'; 
     protected $tablemaster_ran_jen = 'master_ran_jen'; 
@@ -20,7 +21,7 @@ class LaporanBulananModel extends Model
         if($id == false){
             return $builder->get()->getResultArray();
         }else{
-            return $builder->getWhere(['ran_id ' => $id]);
+            return $builder->getWhere(['ran_id' => $id]);
         }   
     }
 

@@ -4,6 +4,7 @@ use CodeIgniter\Model;
  
 class LaporanTahunanModel extends Model
 {
+    protected $table = 'kartus';
     protected $tablekendaraan = 'kendaraan'; 
     protected $tablemaster_bbm_jenis = 'master_bbm_jenis'; 
     protected $tablemaster_ran_jen = 'master_ran_jen'; 

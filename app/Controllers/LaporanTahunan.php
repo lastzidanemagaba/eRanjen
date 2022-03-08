@@ -4,6 +4,8 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\LaporanTahunanModel;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 class LaporanTahunan extends BaseController
 {
@@ -32,6 +34,220 @@ class LaporanTahunan extends BaseController
         echo view('header_view',$data);
         echo view('view_laporantahunan',$data);
         echo view('footer_view',$data);
+    }
+
+    public function export()
+    {
+        $model = new LaporanTahunanModel();
+        $users = $model->findAll();
+
+        $spreadsheet = new Spreadsheet();
+        $spreadsheet->setActiveSheetIndex(0)
+            ->setCellValue('A1', 'SUMMARY')
+            ->setCellValue('A2', 'PERTAMAX')
+            ->setCellValue('A3', 'No')
+            ->setCellValue('B3', 'Tahun')
+            ->setCellValue('C3', 'Alokasi BBM')
+            ->setCellValue('D3', 'RANUM')
+            ->setCellValue('D4', 'R6')
+            ->setCellValue('G4', 'R4')
+            ->setCellValue('J4', 'R2')
+
+            ->setCellValue('D5', 'Alokasi')
+            ->setCellValue('E5', 'Terserap')
+            ->setCellValue('F5', 'Sisa')
+
+            ->setCellValue('G5', 'Alokasi')
+            ->setCellValue('H5', 'Terserap')
+            ->setCellValue('I5', 'Sisa')
+
+            ->setCellValue('J5', 'Alokasi')
+            ->setCellValue('K5', 'Terserap')
+            ->setCellValue('L5', 'Sisa')
+
+            ->setCellValue('M3', 'RANSUS')
+            ->setCellValue('M4', 'R6')
+            ->setCellValue('P4', 'R4')
+            ->setCellValue('S4', 'R2')
+
+            ->setCellValue('M5', 'Alokasi')
+            ->setCellValue('N5', 'Terserap')
+            ->setCellValue('O5', 'Sisa')
+
+            ->setCellValue('P5', 'Alokasi')
+            ->setCellValue('Q5', 'Terserap')
+            ->setCellValue('R5', 'Sisa')
+
+            ->setCellValue('S5', 'Alokasi')
+            ->setCellValue('T5', 'Terserap')
+            ->setCellValue('U5', 'Sisa')
+
+            ->setCellValue('V3', 'DUK RUTIN')
+
+            ->setCellValue('Y3', 'Jumlah')
+            ->setCellValue('Y5', 'Terserap')
+            ->setCellValue('Z5', 'Sisa')
+
+            ->setCellValue('V5', 'Alokasi')
+            ->setCellValue('W5', 'Terserap')
+            ->setCellValue('X5', 'Sisa');
+           
+
+        $column = 6;
+        $no=1;
+        foreach ($users as $user) {
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('A1:Z1');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('A2:Z2');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('A3:A5');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('B3:B5');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('C3:C5');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('D3:L3');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('D4:F4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('G4:I4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('J4:L4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('M3:U3');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('M4:O4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('P4:R4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('S4:U4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('V3:X4');
+            $spreadsheet->setActiveSheetIndex(0)->mergeCells('Y3:Z4');
+        
+
+            
+            
+           
+
+            
+            $spreadsheet->setActiveSheetIndex(0)
+                ->setCellValue('A' . $column, $no)
+                ->setCellValue('B' . $column, $user['kartu_tag_no'])
+                ->setCellValue('C' . $column, $user['kartu_tipe'])
+                ->setCellValue('D' . $column, $user['kartu_ranjen_is'])
+                ->setCellValue('E' . $column, $user['kartu_kendaraan'])
+                ->setCellValue('F' . $column, $user['kartu_banned'])
+                ->setCellValue('G' . $column, $user['kartu_created_tgl'])
+                ->setCellValue('H' . $column, $user['kartu_paired'])
+                ->setCellValue('I' . $column, $user['kartu_paired_by'])
+                ->setCellValue('J' . $column, $user['kartu_paired_tgl'])
+                ->setCellValue('K' . $column, $user['kartu_deleted'])
+                ->setCellValue('L' . $column, $user['kartu_deleted_by'])
+                ->setCellValue('M' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('N' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('O' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('P' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('Q' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('R' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('S' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('T' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('U' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('V' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('W' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('X' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('Y' . $column, $user['kartu_deleted_tgl'])
+                ->setCellValue('Z' . $column, $user['kartu_tag_no']);
+                
+            $column++;
+            $no++;
+        }
+        $spreadsheet->getActiveSheet()->getStyle('A1')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('A1')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('A2')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('A2')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('A3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('A3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('B3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('B3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('C3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('C3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('G4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('G4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('J4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('J4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('P4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('P4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('S4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('S4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('D5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('E5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('E5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('F5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('F5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('G5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('G5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('H5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('H5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('I5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('I5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('J5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('J5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('K5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('K5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('L5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('L5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('N5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('N5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('O5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('O5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('P5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('P5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Q5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Q5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('R5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('R5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('S5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('S5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('T5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('T5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('U5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('U5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('W5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('W5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('X5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('X5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Z5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Z5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('V4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y4')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('Y4')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M3')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getActiveSheet()->getStyle('M3')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet
+                ->getActiveSheet()
+                ->getStyle('A2')
+                ->getFill()
+                ->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID)
+                ->getStartColor()
+                ->setARGB('0000FF');
+
+        $spreadsheet->getActiveSheet()->getStyle('A2')
+                ->getFont()->getColor()->setARGB(\PhpOffice\PhpSpreadsheet\Style\Color::COLOR_WHITE);
+        
+        $writer = new Xlsx($spreadsheet);
+        $filename = date('Y-m-d-His'). '-Laporan-Tahunan';
+
+        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+        header('Content-Disposition: attachment;filename=' . $filename . '.xlsx');
+        header('Cache-Control: max-age=0');
+
+        $writer->save('php://output');
     }
 
 }

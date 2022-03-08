@@ -1,0 +1,141 @@
+CRITICAL - 2022-03-07 11:04:40 --> Undefined array key "user_email	"
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 35)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 13:51:30 --> Merge must be set on a range of cells.
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(40): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->mergeCells('D3:E3:F3')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 13:52:35 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 13:52:52 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 13:53:05 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:00:35 --> You tried to set a sheet active by the out of bounds index: 3. The actual number of sheets is 1.
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(35): PhpOffice\PhpSpreadsheet\Spreadsheet->setActiveSheetIndex(3)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:00:43 --> You tried to set a sheet active by the out of bounds index: 1. The actual number of sheets is 1.
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(35): PhpOffice\PhpSpreadsheet\Spreadsheet->setActiveSheetIndex(1)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:20:42 --> Undefined variable $sheet
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 24)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:20:48 --> Call to undefined method PhpOffice\PhpSpreadsheet\Spreadsheet::getColumnDimension()
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-07 14:21:43 --> Call to undefined method PhpOffice\PhpSpreadsheet\Spreadsheet::getStyle()
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-07 14:24:45 --> Undefined constant PhpOffice\PhpSpreadsheet\Style\Alignment::CENTER
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-07 14:46:56 --> syntax error, unexpected variable "$column"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:59:39 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 14:59:45 --> syntax error, unexpected identifier "RUTIN"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 15:03:35 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 15:07:36 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 15:24:08 --> syntax error, unexpected token "->"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('users/export')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('users/export')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-07 15:26:00 --> Undefined variable $cells
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Users.php(222): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 222)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Users->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Users))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
