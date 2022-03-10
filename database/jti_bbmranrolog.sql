@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2022 at 01:26 PM
+-- Generation Time: Mar 10, 2022 at 10:25 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -29,18 +29,18 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `kartus` (
   `kartu_id` int(80) NOT NULL,
-  `kartu_tag_no` varchar(80) NOT NULL,
+  `kartu_tag_no` varchar(255) NOT NULL,
   `kartu_tipe` int(11) NOT NULL COMMENT '1 ranum, 2 ransus',
   `kartu_ranjen_is` int(11) NOT NULL COMMENT '1 ranjen, 2 kupon dukungan, 3 cadangan master, 4 cadangan jabatan',
-  `kartu_kendaraan` varchar(80) NOT NULL,
-  `kartu_banned` int(80) NOT NULL,
-  `kartu_created_tgl` datetime(1) NOT NULL,
-  `kartu_paired` varchar(80) NOT NULL,
-  `kartu_paired_by` varchar(80) NOT NULL,
-  `kartu_paired_tgl` datetime(1) NOT NULL,
-  `kartu_deleted` int(80) NOT NULL,
-  `kartu_deleted_by` varchar(80) NOT NULL,
-  `kartu_deleted_tgl` datetime(1) NOT NULL
+  `kartu_kendaraan` int(11) NOT NULL,
+  `kartu_banned` int(11) NOT NULL DEFAULT 0,
+  `kartu_created_tgl` datetime NOT NULL,
+  `kartu_paired` int(11) NOT NULL DEFAULT 0,
+  `kartu_paired_by` int(11) DEFAULT NULL,
+  `kartu_paired_tgl` datetime NOT NULL,
+  `kartu_deleted` int(11) DEFAULT NULL,
+  `kartu_deleted_by` int(11) DEFAULT NULL,
+  `kartu_deleted_tgl` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -48,8 +48,12 @@ CREATE TABLE `kartus` (
 --
 
 INSERT INTO `kartus` (`kartu_id`, `kartu_tag_no`, `kartu_tipe`, `kartu_ranjen_is`, `kartu_kendaraan`, `kartu_banned`, `kartu_created_tgl`, `kartu_paired`, `kartu_paired_by`, `kartu_paired_tgl`, `kartu_deleted`, `kartu_deleted_by`, `kartu_deleted_tgl`) VALUES
-(1, '2B0HFAU', 2, 1, '1', 0, '2022-02-02 10:17:44.0', '1', '1', '2022-02-07 10:16:12.0', 0, '', '2022-02-02 10:16:18.0'),
-(2, 'DFREA3', 1, 1, '', 0, '0000-00-00 00:00:00.0', '', '', '0000-00-00 00:00:00.0', 0, '', '0000-00-00 00:00:00.0');
+(1, 'D08U3AY', 1, 1, 0, 0, '2022-03-09 08:36:27', 0, NULL, '2022-03-09 08:36:27', NULL, NULL, '2022-03-09 08:36:27'),
+(2, 'DIO0382', 2, 2, 0, 0, '2022-03-09 08:37:54', 0, NULL, '2022-03-09 08:37:54', NULL, NULL, '2022-03-09 08:37:54'),
+(3, 'DGTE321', 1, 3, 1, 0, '2022-03-09 08:38:22', 0, NULL, '2022-03-09 08:38:22', NULL, NULL, '2022-03-09 08:38:22'),
+(4, 'HY32A2', 2, 4, 0, 0, '2022-03-09 08:38:41', 0, NULL, '2022-03-09 08:38:41', NULL, NULL, '2022-03-09 08:38:41'),
+(5, 'GHAHY3', 1, 1, 1, 0, '2022-03-09 09:09:14', 0, NULL, '2022-03-09 09:09:14', NULL, NULL, '2022-03-09 09:09:14'),
+(6, 'BAHAGIA', 1, 1, 1, 0, '2022-03-09 09:54:51', 0, NULL, '2022-03-09 09:54:51', NULL, NULL, '2022-03-09 09:54:51');
 
 -- --------------------------------------------------------
 
@@ -102,8 +106,7 @@ INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran
 (4, 'CINTA-V1', '1', '2', '2', '19', '1', '1', '36262', '15', '15', '', '', NULL),
 (5, 'JUREH-01', '1', '2', '3', '21', '3', '3', '333', '17', '15', '', '', NULL),
 (7, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', '', '', NULL),
-(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', NULL, NULL, NULL),
-(9, 'JOGJA-001', '2', '2', '6', '19', '3', '5', '123', '', '', NULL, NULL, NULL);
+(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -137,7 +140,14 @@ INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`,
 (11, '2022-03-04 15:46:50', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
 (12, '2022-03-07 10:33:34', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
 (13, '2022-03-07 15:35:30', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
-(14, '2022-03-08 10:05:07', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1');
+(14, '2022-03-08 10:05:07', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(15, '2022-03-09 10:45:30', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(16, '2022-03-09 16:19:33', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(17, '2022-03-09 16:26:37', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(18, '2022-03-09 16:50:16', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(19, '2022-03-10 10:09:57', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(20, '2022-03-10 11:15:58', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1'),
+(21, '2022-03-10 11:35:51', 'Login Ke Aplikasi Web e-Ranjen', '3', '::1');
 
 -- --------------------------------------------------------
 
@@ -724,7 +734,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT for table `kartus`
 --
 ALTER TABLE `kartus`
-  MODIFY `kartu_id` int(80) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `kartu_id` int(80) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kartu_trxs`
@@ -742,7 +752,7 @@ ALTER TABLE `kendaraan`
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `master_alokasibbm`
