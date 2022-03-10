@@ -5,9 +5,7 @@
 
                     <!-- Page Heading -->
                     <center><h1 class="h3 mb-2 text-gray-800">Laporan Harian</h1></center>
-                    <a href="<?= base_url('LaporanHarian/export');?>" class="btn btn-success mb-2">
-                    <span class="fas fa-file-export"></span> Export
-                    </a>
+                    <center><a href="<?= base_url('LaporanHarian/export');?>" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Excel</a></center>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">

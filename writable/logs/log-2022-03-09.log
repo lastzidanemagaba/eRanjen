@@ -1,0 +1,339 @@
+CRITICAL - 2022-03-09 14:22:55 --> Undefined variable $resulttotalkendaraan
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 13)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(16): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 14:57:20 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 14:57:50 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::select()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 14:58:52 --> syntax error, unexpected variable "$result"
+#0 D:\xampp\htdocs\eRanjen\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\eRanjen\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Dash...')
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Dash...')
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-09 14:59:00 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 14:59:09 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-03-09 15:01:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`' at line 1
+CRITICAL - 2022-03-09 15:01:31 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-03-09 15:01:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`' at line 1
+ERROR - 2022-03-09 15:02:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`' at line 1
+ERROR - 2022-03-09 15:02:41 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`' at line 1
+CRITICAL - 2022-03-09 15:02:41 --> Call to a member function getResultArray() on bool
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 15:03:48 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:03:49 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2022-03-09 15:04:35 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`
+WHERE `kartu_ranjen_is` = 1' at line 1
+CRITICAL - 2022-03-09 15:06:34 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:06:55 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:11:47 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:12:59 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:16:12 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:17:10 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:17:49 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:19:09 --> Object of class CodeIgniter\Database\MySQLi\Result could not be converted to string
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2022-03-09 15:20:46 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+ERROR - 2022-03-09 15:27:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '1
+FROM `kartus`' at line 1
+CRITICAL - 2022-03-09 15:27:39 --> Call to a member function getResultArray() on bool
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 15:34:44 --> Undefined variable $builder
+#0 D:\xampp\htdocs\eRanjen\app\Models\DashboardModel.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 35)
+#1 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}
+CRITICAL - 2022-03-09 15:36:42 --> Call to undefined method stdClass::SUM()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 15:41:39 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 32)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 15:42:17 --> Call to a member function first() on array
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(19): App\Models\DashboardModel->tampil_totalkartusranjen()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-03-09 15:43:46 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(22): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 15:51:33 --> syntax error, unexpected variable "$query"
+#0 D:\xampp\htdocs\eRanjen\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\eRanjen\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Dash...')
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(12): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Dash...')
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-03-09 16:00:50 --> Undefined variable $resulttotalkartuskupon
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 48)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(29): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 16:03:50 --> Undefined variable $resulttotalkartuscadanganjabatan
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 82)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(29): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 16:04:29 --> Undefined constant "App\Controllers\resulttotalkartuscadanganjabatan"
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#5 {main}
+CRITICAL - 2022-03-09 16:06:15 --> Array to string conversion
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(48): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string...', 'D:\\xampp\\htdocs...', 48)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(29): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 16:10:36 --> Undefined array key "SUM(kartu_ranjen_is)"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 31)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(29): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-03-09 16:16:28 --> Undefined variable $query
+#0 D:\xampp\htdocs\eRanjen\app\Models\DashboardModel.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 57)
+#1 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(26): App\Models\DashboardModel->tampil_totalkartuscadanganjabatan()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 D:\xampp\htdocs\eRanjen\system\Commands\Server\rewrite.php(43): require_once('D:\\xampp\\htdocs...')
+#7 {main}
