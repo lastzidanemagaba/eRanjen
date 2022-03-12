@@ -9,7 +9,7 @@ class Auth extends BaseController
     {
         $this->userModel = new UserModel();
         $this->session = \Config\Services::session();
-        
+        $this->session->start();
     }
 
     public function index()
@@ -35,6 +35,8 @@ class Auth extends BaseController
             if(password_verify($post['user_pass'], $user->user_pass)){
                 $params= ['user_id' => $user->user_id,
                           'user_role' => $user->user_role,
+                          'user_nama' => $user->user_nama,
+                          'user_email' => $user->user_email,
                 ];
                 session()->set($params);
                 $model = new UserModel();

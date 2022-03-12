@@ -1,0 +1,109 @@
+CRITICAL - 2022-03-11 11:08:48 --> Undefined variable $params
+#0 D:\xampp\htdocs\eRanjen\app\Views\header_view.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 210)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('header_view', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): view('header_view', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-11 11:09:22 --> Undefined variable $params
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 30)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 11:09:23 --> Undefined variable $params
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 30)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 11:11:19 --> Undefined variable $params
+#0 D:\xampp\htdocs\eRanjen\app\Views\header_view.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 210)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('header_view', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): view('header_view', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-11 11:12:38 --> Undefined property: CodeIgniter\View\View::$session
+#0 D:\xampp\htdocs\eRanjen\app\Views\header_view.php(210): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 210)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('header_view', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): view('header_view', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-11 11:17:54 --> Call to undefined function user()
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('header_view', Array, true)
+#3 D:\xampp\htdocs\eRanjen\app\Controllers\Dashboard.php(30): view('header_view', Array)
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Dashboard->index()
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-11 11:27:15 --> CodeIgniter\HTTP\RedirectResponse::to(): Argument #2 ($code) must be of type ?int, array given, called in D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php on line 50
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(50): CodeIgniter\HTTP\RedirectResponse->to('Dashboard', Array)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 11:28:01 --> Invalid file: Dashboard.php
+#0 D:\xampp\htdocs\eRanjen\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Dashboard.php')
+#1 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('Dashboard', Array, true)
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(51): view('Dashboard', Array)
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-11 11:39:52 --> CodeIgniter\Session\Session::get(): Argument #1 ($key) must be of type ?string, array given, called in D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php on line 51
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(51): CodeIgniter\Session\Session->get(Array)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 11:40:21 --> Undefined variable $resulttotalkendaraan
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 13)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(52): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-11 11:54:33 --> CodeIgniter\Session\Session::get(): Argument #1 ($key) must be of type ?string, array given, called in D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php on line 51
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(51): CodeIgniter\Session\Session->get(Array)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-11 11:55:45 --> Undefined variable $resulttotalkendaraan
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 13)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_dashboard', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Auth.php(52): view('view_dashboard', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Auth->loginProcess()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
