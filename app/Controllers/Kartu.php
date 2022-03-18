@@ -23,7 +23,6 @@ class Kartu extends BaseController
         $model = new KartuModel();
         $data = array(
             'kartu_tag_no' => $this->request->getPost('kartu_tag_no'),
-            'kartu_tipe' => $this->request->getPost('kartu_tipe'),
             'kartu_ranjen_is'  => $this->request->getPost('kartu_ranjen_is'),
         );
         $model->saveKartu($data);
@@ -39,7 +38,6 @@ class Kartu extends BaseController
         $id = $this->request->getPost('kartu_id');
         $data = array(
             'kartu_tag_no' => $this->request->getPost('kartu_tag_no'),
-            'kartu_tipe' => $this->request->getPost('kartu_tipe'),
             'kartu_ranjen_is'  => $this->request->getPost('kartu_ranjen_is'),
         );
         $kondisi =  $model->updateKartu($data, $id);

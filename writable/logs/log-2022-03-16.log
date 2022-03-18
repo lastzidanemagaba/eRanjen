@@ -1,0 +1,33 @@
+CRITICAL - 2022-03-16 11:21:03 --> Undefined array key "kartu_tipe"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 43)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-16 11:21:36 --> Undefined array key "kartu_tipe"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 43)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-16 11:22:10 --> Undefined array key "kartu_tipe"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 50)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -20,6 +20,7 @@ use PhpCsFixer\FixerDefinition\FixerDefinition;
 use PhpCsFixer\FixerDefinition\FixerDefinitionInterface;
 use PhpCsFixer\Tokenizer\Analyzer\Analysis\NamespaceAnalysis;
 use PhpCsFixer\Tokenizer\Analyzer\NamespacesAnalyzer;
+use PhpCsFixer\Tokenizer\Analyzer\NamespaceUsesAnalyzer;
 use PhpCsFixer\Tokenizer\CT;
 use PhpCsFixer\Tokenizer\Token;
 use PhpCsFixer\Tokenizer\Tokens;
@@ -32,7 +33,7 @@ final class ClassReferenceNameCasingFixer extends AbstractFixer
     public function getDefinition(): FixerDefinitionInterface
     {
         return new FixerDefinition(
-            'When referencing a class it must be written using the correct casing.',
+            'When referencing an internal class it must be written using the correct casing.',
             [
                 new CodeSample("<?php\nthrow new \\exception();\n"),
             ]
@@ -53,14 +54,21 @@ final class ClassReferenceNameCasingFixer extends AbstractFixer
     protected function applyFix(\SplFileInfo $file, Tokens $tokens): void
     {
         $namespacesAnalyzer = new NamespacesAnalyzer();
+        $namespaceUsesAnalyzer = new NamespaceUsesAnalyzer();
         $classNames = $this->getClassNames();
 
         foreach ($namespacesAnalyzer->getDeclarations($tokens) as $namespace) {
+            $uses = [];
+
+            foreach ($namespaceUsesAnalyzer->getDeclarationsInNamespace($tokens, $namespace) as $use) {
+                $uses[strtolower($use->getShortName())] = true;
+            }
+
             foreach ($this->getClassReference($tokens, $namespace) as $reference) {
                 $currentContent = $tokens[$reference]->getContent();
                 $lowerCurrentContent = strtolower($currentContent);
 
-                if (isset($classNames[$lowerCurrentContent]) && $currentContent !== $classNames[$lowerCurrentContent]) {
+                if (isset($classNames[$lowerCurrentContent]) && $currentContent !== $classNames[$lowerCurrentContent] && !isset($uses[$lowerCurrentContent])) {
                     $tokens[$reference] = new Token([T_STRING, $classNames[$lowerCurrentContent]]);
                 }
             }
@@ -78,6 +86,7 @@ final class ClassReferenceNameCasingFixer extends AbstractFixer
                 T_CASE, // PHP 8.1 trait enum-case
                 T_CLASS,
                 T_CONST,
+                T_DOUBLE_ARROW,
                 T_DOUBLE_COLON,
                 T_FUNCTION,
                 T_INTERFACE,
@@ -120,7 +129,7 @@ final class ClassReferenceNameCasingFixer extends AbstractFixer
                 continue;
             }
 
-            if (!$tokens[$prevIndex]->isGivenKind([T_NEW]) && $tokens[$nextIndex]->equals('(')) {
+            if (!$tokens[$prevIndex]->isGivenKind(T_NEW) && $tokens[$nextIndex]->equals('(')) {
                 continue;
             }
 

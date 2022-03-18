@@ -104,6 +104,7 @@ final class SymfonySet extends AbstractRuleSetDescription
             ],
             'no_trailing_comma_in_list_call' => true,
             'no_trailing_comma_in_singleline_array' => true,
+            'no_trailing_comma_in_singleline_function_call' => true,
             'no_unneeded_control_parentheses' => [
                 'statements' => [
                     'break',
@@ -158,6 +159,7 @@ final class SymfonySet extends AbstractRuleSetDescription
             'protected_to_private' => true,
             'semicolon_after_instruction' => true,
             'single_class_element_per_statement' => true,
+            'single_line_comment_spacing' => true,
             'single_line_comment_style' => [
                 'comment_types' => [
                     'hash',

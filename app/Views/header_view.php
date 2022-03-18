@@ -16,7 +16,7 @@
     <link
         href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
         rel="stylesheet">
-    <link rel="icon" href="https://toppng.com/uploads/preview/sponge-bob-square-pants-11549855112s7qg5zv9dg.png" type="image/gif"> 
+    <link rel="icon" href="https://fashionsista.co/downloadpng/png/20201005/emotion-funny-happy-meme-reaction-smile-u-mad-bro-icon.jpg" type="image/gif"> 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -150,6 +150,16 @@
             
 
             <!-- Divider -->
+
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('Dashboard');?>">
+                    <i class="fas fa-fw fa-copy"></i>
+                    <span>NFC</span></a>
+            </li>
+            <!-- Nav Item - Utilities Collapse Menu -->
+            
+            <!-- Divider -->
+            <hr class="sidebar-divider">
             
 
             <!-- Sidebar Toggler (Sidebar) -->

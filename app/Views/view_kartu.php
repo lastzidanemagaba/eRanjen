@@ -5,11 +5,10 @@
 
                     <!-- Page Heading -->
                     <center><h1 class="h3 mb-2 text-gray-800">Kartu</h1></center>
-                    <center><button type="button" class="btn btn-success mb-2" data-toggle="modal" data-target="#addModalKartu">Tambah Data</button></center>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Kartu Ranjen</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">Kartu</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -19,7 +18,6 @@
                                             <th><center>No</center></th>
                                             <th><center>Nomor Kartu</center></th>
                                             <th><center>Ranjen</center></th>
-                                            <th><center>Jenis Kartu</center></th>
                                             <th><center>Kendaraan</center></th>
                                             <th><center>Paired</center></th>
                                             <th><center>Paired Tgl</center></th>
@@ -32,31 +30,21 @@
                                             $kartu_ranjen_is = 'Ranjen';
                                         }
                                         else  if($isi['kartu_ranjen_is'] == 2){
-                                            $kartu_ranjen_is = 'Kupon Dukungan';
-                                        }
-                                        else  if($isi['kartu_ranjen_is'] == 3){
                                             $kartu_ranjen_is = 'Cadangan Master';
                                         }
-                                        else  if($isi['kartu_ranjen_is'] == 4){
+                                        else  if($isi['kartu_ranjen_is'] == 3){
                                             $kartu_ranjen_is = 'Cadangan Jabatan';
-                                        }
-                                        if($isi['kartu_tipe'] == 1){
-                                            $kartutipe = 'RANUM';
-                                        }
-                                        else  if($isi['kartu_tipe'] == 2){
-                                            $kartutipe = 'RANSUS';
                                         }?>
                             <tr>
                                 <td><center><?= $no;?></center></td>
                                 <td><center><?= $isi['kartu_tag_no'];?></center></td>
-                                <td><center><?= $kartutipe;?></center></td>
                                 <td><center><?= $kartu_ranjen_is;?></center></td>
                                 <td><center><?= $isi['kartu_kendaraan'];?></center></td>
                                 <td><center><?= $isi['kartu_paired'];?></center></td>
                                 <td><center><?= $isi['kartu_paired_tgl'];?></center></td>
                                 <td>
-                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-kartu_id ="<?= $isi['kartu_id'];?>" data-kartu_tag_no="<?= $isi['kartu_tag_no'];?>" data-kartu_tipe="<?= $isi['kartu_tipe'];?>" data-kartu_ranjen_is="<?= $isi['kartu_ranjen_is'];?>" data-kartu_kendaraan="<?= $isi['kartu_kendaraan'];?>" data-kartu_paired="<?= $isi['kartu_paired'];?>" data-kartu_paired_tgl="<?= $isi['kartu_paired_tgl'];?>">Edit</a></center>
-                                    <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-kartu_id ="<?= $isi['kartu_id'];?>">Delete</a></center>
+                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-kartu_id ="<?= $isi['kartu_id'];?>" data-kartu_tag_no="<?= $isi['kartu_tag_no'];?>"  data-kartu_ranjen_is="<?= $isi['kartu_ranjen_is'];?>" data-kartu_kendaraan="<?= $isi['kartu_kendaraan'];?>" data-kartu_paired="<?= $isi['kartu_paired'];?>" data-kartu_paired_tgl="<?= $isi['kartu_paired_tgl'];?>">Detail</a></center>
+                                    <!--<center><a href="#" class="btn btn-danger btn-sm btn-delete" data-kartu_id ="<?= $isi['kartu_id'];?>">Delete</a></center>-->
                                 </td>
                             </tr>
                         <?php $no++;}?>
@@ -153,15 +141,6 @@
                                 <div class="form-group">
                                     <label>No Tag</label>
                                     <input type="text" class="form-control" name="kartu_tag_no" placeholder="kartu_tag_no"required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label>Ranjen</label>
-                                    <select name="kartu_tipe" class="form-control" required>
-                                        <option value="">-Pilih-</option>
-                                        <?php foreach($groupsran_jen as $each){ ?><option value="<?php echo $each["mrj_id"]; ?>"><?php echo $each["mrj_nama"]; ?></option>
-                                        <?php } ?>
-                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Kartu</label>

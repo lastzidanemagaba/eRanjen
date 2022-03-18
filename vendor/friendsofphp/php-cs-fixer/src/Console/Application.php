@@ -39,13 +39,10 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 final class Application extends BaseApplication
 {
-    public const VERSION = '3.6.0';
-    public const VERSION_CODENAME = 'Roe Deer';
+    public const VERSION = '3.7.0';
+    public const VERSION_CODENAME = '#StandWithUkraine️';
 
-    /**
-     * @var ToolInfo
-     */
-    private $toolInfo;
+    private ToolInfo $toolInfo;
 
     public function __construct()
     {
