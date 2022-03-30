@@ -112,8 +112,7 @@
             // Call Modal Edit
             $('#editModalAlokasiBBM').modal('show');
         });
-        
-        // get Edit Kendaraan
+
         $(document).on('click', '.btn-edit', function(){
             // get data from button edit
             const ran_id = $(this).data('ran_id');
@@ -137,6 +136,28 @@
             $('.ran_liter').val(ran_liter);
             // Call Modal Edit
             $('#editModalKendaraan').modal('show');
+        });
+        
+        // get Edit Kendaraan
+        $(document).on('click', '.btn-edit', function(){
+            // get data from button edit
+            const kartu_id = $(this).data('kartu_id');
+            const kartu_tag_no = $(this).data('kartu_tag_no');
+            const kartu_ranjen_is  = $(this).data('kartu_ranjen_is');
+            const ran_nopol = $(this).data('ran_nopol');
+            const ran_satker = $(this).data('ran_satker');
+            const kartu_paired = $(this).data('kartu_paired');
+            const kartu_paired_tgl = $(this).data('kartu_paired_tgl');
+            // Set data to Form Edit
+            $('.kartu_id').val(kartu_id);
+            $('.kartu_tag_no').val(kartu_tag_no);
+            $('.kartu_ranjen_is').val(kartu_ranjen_is);
+            $('.ran_nopol').val(ran_nopol);
+            $('.ran_satker').val(ran_satker);
+            $('.kartu_paired').val(kartu_paired);
+            $('.kartu_paired_tgl').val(kartu_paired_tgl);
+            // Call Modal Edit
+            $('#editModalKartu').modal('show');
         });
 
     

@@ -91,7 +91,7 @@ class LaporanSatker extends BaseController
                 ->setCellValue('B' . $column, $user['ran_nopol'])
                 ->setCellValue('C' . $column, $user['ran_bbm_jenis'])
                 ->setCellValue('D' . $column, $user['ran_jen'])
-                ->setCellValue('E' . $column, $user['ran_tipe'])
+                ->setCellValue('E' . $column, $user['ran_jen'])
                 ->setCellValue('F' . $column, $user['ran_satker'])
                 ->setCellValue('G' . $column, $user['ran_kondisi'])
                 ->setCellValue('H' . $column, $user['ran_wilayah'])

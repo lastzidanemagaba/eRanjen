@@ -32,9 +32,10 @@
                                         <?php 
                                         
                                         ?>
+                                        
                                     <?php $no=1; foreach($groupsall as $isi){?>
                             <tr>
-                                
+
                                 <td><center><?= $no;?></center></td>
                                 <td><center><?= $isi['ran_nopol'];?></center></td>
                                 <td><center><?= $isi['ran_bbm_jenis'];?></center></td>

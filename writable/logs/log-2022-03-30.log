@@ -1,0 +1,206 @@
+CRITICAL - 2022-03-30 11:05:40 --> Undefined array key "kartu_kendaraan"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(46): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 46)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:06:45 --> Undefined array key "kartu_id"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 51)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-03-30 11:07:50 --> Unknown column 'kendaraan.kartu_id' in 'field list'
+CRITICAL - 2022-03-30 11:07:50 --> Call to a member function getResultArray() on bool
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(13): App\Models\KartuModel->getJoinKendaraan()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 11:08:05 --> Undefined array key "kartu_kendaraan"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 51)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:27:42 --> Undefined variable $kartu_ranjen_is
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:27:51 --> Undefined variable $kartu_ranjen_is
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:27:54 --> Undefined variable $kartu_ranjen_is
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:29:58 --> Undefined variable $kartu_ranjen_is
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-30 11:39:38 --> Call to undefined function App\Controllers\newencryptdata()
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-30 11:40:02 --> Call to undefined function App\Controllers\strhex()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(66): App\Controllers\Kartu->newencryptdata('replace')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 11:40:12 --> Call to undefined function App\Controllers\strhex()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(66): App\Controllers\Kartu->newencryptdata('replace')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 11:40:20 --> Call to undefined function App\Controllers\getRandomString()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(66): App\Controllers\Kartu->newencryptdata('replace')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 11:43:15 --> Too few arguments to function App\Controllers\Kartu::nyoba(), 0 passed in D:\xampp\htdocs\eRanjen\system\CodeIgniter.php on line 825 and exactly 1 expected
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-30 11:43:34 --> Undefined array key "ran_id"
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 65)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 11:45:56 --> syntax error, unexpected variable "$ran_id", expecting "," or ";"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Kartu')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Kartu')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 12:03:12 --> Call to undefined function App\Controllers\nyoba2()
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-30 12:03:29 --> Call to undefined function App\Controllers\newencryptdata()
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(78): App\Controllers\Kartu->nyoba2('QjliRWE2NTJyMUt...', '1002')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 12:09:33 --> Undefined property: App\Controllers\Kartu::$M0E4NjI1MGVKQ1Q2a29PWnNmem9Fbi85SlpWK3BnPT0=
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 67)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 12:10:29 --> Undefined property: App\Controllers\Kartu::$1002
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 68)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 12:10:52 --> Undefined property: App\Controllers\Kartu::$M2RiMDdFQ2Fqd0drNjErYkVrWEdtVjdBWDkwdFBRPT0=
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 69)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 12:11:07 --> Undefined property: App\Controllers\Kartu::$1002
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(80): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 80)
+#1 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(75): App\Controllers\Kartu->nyoba2('YkZjN2UwNDlZa0Z...', '1002')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-03-30 13:30:24 --> syntax error, unexpected variable "$outputya"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Kartu/nyoba')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Kartu/nyoba')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-03-30 13:56:58 --> Column 'kartu_tag_no' cannot be null
+CRITICAL - 2022-03-30 14:54:55 --> syntax error, unexpected token "echo"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('Kartu/nyoba')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('Kartu/nyoba')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-30 15:05:56 --> Undefined property: App\Controllers\Kartu::$
+36287149
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined prope...', 'D:\\xampp\\htdocs...', 115)
+#1 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(97): App\Controllers\Kartu->nyoba3()
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(80): App\Controllers\Kartu->nyoba2('MGQ1OTRjZERBNU9...', '1004')
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->nyoba()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-30 16:09:55 --> Undefined array key "ran_ranjen_is"
+#0 D:\xampp\htdocs\eRanjen\app\Controllers\LaporanSatker.php(94): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 94)
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\LaporanSatker->export()
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LaporanSatker))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
