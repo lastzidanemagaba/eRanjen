@@ -117,7 +117,7 @@ class Kartu extends BaseController
         $pecahinya23 = substr($status,0,4);
         $pecahinya2 = substr($outputya,6,12);
         $nospasi = str_replace(' ', '', $pecahinya2);
-        //echo $pecahinya23;
+        echo $nospasi;
         if($pecahinya23 == 6300){
             echo '<script>
                     alert("Gagal");
@@ -126,7 +126,7 @@ class Kartu extends BaseController
         }
         else if($pecahinya23 == 9000){
             $model = new KartuModel();
-            $id = 1;
+            $id = 2;
             $data = array(
                 'kartu_tag_no' => $nospasi,
                 'kartu_paired' => 1,

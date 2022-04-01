@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 18, 2022 at 05:40 PM
+-- Generation Time: Mar 29, 2022 at 02:06 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -105,7 +105,7 @@ INSERT INTO `kendaraan` (`ran_id`, `ran_nopol`, `ran_bbm_jenis`, `ran_jen`, `ran
 (3, 'HIV-111', '1', '1', '2', '18', '3', '1', '123', '20', '1', 1, '', '', NULL),
 (4, 'CINTA-V1', '1', '2', '2', '19', '1', '1', '36262', '15', '15', 1, '', '', NULL),
 (5, 'JUREH-01', '1', '2', '3', '21', '3', '3', '333', '17', '15', 1, '', '', NULL),
-(8, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', 1, NULL, NULL, NULL),
+(123, 'SEJATI-221', '2', '2', '6', '24', '3', '5', '123', '', '', 1, NULL, NULL, NULL),
 (1001, 'NANO-90', '1', '1', '6', '1', '1', '1', '456', '', '', 1, '', '', NULL);
 
 -- --------------------------------------------------------
@@ -171,7 +171,8 @@ INSERT INTO `log_aktifitas` (`logak_id`, `logak_tgl`, `logak_ket`, `logak_user`,
 (42, '2022-03-16 15:16:43', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
 (43, '2022-03-16 16:14:58', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
 (44, '2022-03-17 11:59:04', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
-(45, '2022-03-18 10:41:40', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1');
+(45, '2022-03-18 10:41:40', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1'),
+(46, '2022-03-29 10:32:16', 'Login Ke Aplikasi Web e-Ranjen', '2', '::1');
 
 -- --------------------------------------------------------
 
@@ -775,7 +776,7 @@ ALTER TABLE `kendaraan`
 -- AUTO_INCREMENT for table `log_aktifitas`
 --
 ALTER TABLE `log_aktifitas`
-  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `logak_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `master_alokasibbm`
