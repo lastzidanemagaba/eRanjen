@@ -50,10 +50,10 @@
                             <tr>
                                 <td><center><?= $no;?></center></td>
                                 <td><center><?= $isi['kartu_tag_no'];?></center></td>
-                                <td><center><?= $kartu_ranjen_is;?></center></td>
+                                <td><center><?= $isi['kartu_ranjen_is'];?></center></td>
                                 <td><center><?= $isi['ran_nopol'];?></center></td>
                                 <td><center><?= $isi['ran_satker'];?></center></td>
-                                <td><center><?= $kartu_paired_stats;?></center></td>
+                                <td><center><?= $isi['kartu_paired'];?></center></td>
                                 <td><center><?= $isi['kartu_paired_tgl'];?></center></td>
                                 <td>
                                     <center><a href="#" class="btn btn-info btn-sm btn-edit" data-ran_id ="<?= $isi['ran_id'];?>" data-kartu_tag_no="<?= $isi['kartu_tag_no'];?>"  data-kartu_ranjen_is="<?= $isi['kartu_ranjen_is'];?>" data-ran_nopol="<?= $isi['ran_nopol'];?>" data-ran_satker="<?= $isi['ran_satker'];?>" data-kartu_paired="<?= $isi['kartu_paired'];?>" data-kartu_paired_tgl="<?= $isi['kartu_paired_tgl'];?>">Detail</a></center>
@@ -111,7 +111,7 @@
                     <div class="modal-body">      
                         <div class="form-group">
                                 <label>Kartu Ranjen</label>
-                                <select name="mrj_id" class="form-control id_ranjen_is" >
+                                <select name="mrj_id" class="form-control mrj_id" >
                                 <?php foreach($groupsranjen_is as $isi):?>
                                 <option value="<?= $isi['id_ranjen_is'];?>"><?= $isi['nama_ranjen_is'];?></option>
                                 <?php endforeach;?>

@@ -17,11 +17,9 @@
                                     <thead>
                                         <tr>
                                             <th><center>No</center></th>
-                                            <th><center>Kode SPBU</center></th>
-                                            <th><center>Nama SPBU</center></th>
-                                            <th><center>Wilayah SPBU</center></th>
+                                            <th><center>SPBU</center></th>
                                             <th><center>Alamat</center></th>
-                                            <th><center>Kerjasama</center></th>
+                                            <th><center>Wilayah SPBU</center></th>
                                             <th><center>Action</center></th>
                                         </tr>
                                     </thead>
@@ -29,14 +27,12 @@
                                     <?php $no=1; foreach($getSPBU as $isi){?>
                             <tr>
                                 <td><center><?= $no;?></center></td>
-                                <td><center><?= $isi['spbu_kode'];?></center></td>
                                 <td><center><?= $isi['spbu_nama'];?></center></td>
-                                <td><center><?= $isi['spbu_wilayah'];?></center></td>
                                 <td><center><?= $isi['spbu_alamat'];?></center></td>
-                                <td><center><?= $isi['spbu_kerjasama'];?></center></td>
-                                <td>
-                                    <center><a href="#" class="btn btn-info btn-sm btn-edit" data-spbu_id="<?= $isi['spbu_id'];?>" data-spbu_kode="<?= $isi['spbu_kode'];?>" data-spbu_nama="<?= $isi['spbu_nama'];?>" data-spbu_wilayah="<?= $isi['spbu_wilayah'];?>" data-spbu_alamat="<?= $isi['spbu_alamat'];?>" data-spbu_kerjasama="<?= $isi['spbu_kerjasama'];?>">Edit</a></center>
-                                    <center><a href="#" class="btn btn-danger btn-sm btn-delete" data-spbu_id="<?= $isi['spbu_id'];?>">Delete</a></center>
+                                <td><center><?= $isi['mwil_nama'];?></center></td>
+                                <td class="text-center" style="min-width:230px;">
+                                    <button class="btn btn-info btn-sm btn-edit" data-spbu_id="<?= $isi['spbu_id'];?>" data-spbu_kode="<?= $isi['spbu_kode'];?>" data-spbu_nama="<?= $isi['spbu_nama'];?>" data-spbu_wilayah="<?= $isi['mwil_nama'];?>" data-spbu_alamat="<?= $isi['spbu_alamat'];?>"><i class="glyphicon glyphicon-repeat"></i> Edit</button>
+                                    <button class="btn btn-danger btn-sm btn-delete" data-spbu_id="<?= $isi['spbu_id'];?>"><i class="glyphicon glyphicon-remove-sign"></i> Delete</button>
                                 </td>
                             </tr>
                         <?php $no++;}?>
@@ -139,29 +135,22 @@
 
                         <div class="form-group">
                             <label>Kode SPBU</label>
-                            <input type="text" class="form-control" name="spbu_kode" placeholder="Kode SPBU"required>
+                            <input type="text" class="form-control" name="spbu_kode" placeholder="Contoh 3412701"required>
                         </div>
-
                         <div class="form-group">
-                            <label>Nama SPBU</label>
-                            <input type="text" class="form-control" name="spbu_nama" placeholder="Nama SPBU">
-                        </div>
-                        
-                        <div class="form-group">
-                            <label>Wilayah SPBU</label>
-                            <input type="text" class="form-control" name="spbu_wilayah" placeholder="Wilayah SPBU" required>
+                                <label>Wilayah SPBU</label>
+                                <select name="spbu_wilayah" class="form-control" required>
+                                <option value="">-Pilih Wilayah-</option>
+                                <?php foreach($groupswilayahtugas as $isi):?>
+                                <option value="<?= $isi['mwil_id'];?>"><?= $isi['mwil_nama'];?></option>
+                                <?php endforeach;?>
+                            </select>
                         </div>
 
                         <div class="form-group">
                             <label>Alamat SPBU</label>
                             <input type="text" class="form-control" name="spbu_alamat" placeholder="Alamat SPBU" required>
-                        </div>
-
-
-                        <div class="form-group">
-                            <label>Kerjasama</label>
-                            <input type="text" class="form-control" name="spbu_kerjasama" placeholder="Kerjasama">
-                        </div>             
+                        </div>           
                     </div>
                     
                     <div class="modal-footer">

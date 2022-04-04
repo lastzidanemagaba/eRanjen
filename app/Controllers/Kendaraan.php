@@ -28,7 +28,6 @@ class Kendaraan extends BaseController
         $data['groupsranjen'] = $resultranjen;
         $data['groupstipekendaraan'] = $resulttipekendaraan;
         $data['groupssatker'] = $resultsatker;
-        $data['groupswilayahtugas'] = $resultwilayahtugas;
         echo view('header_view',$data);
         echo view('view_kendaraan',$data);
         echo view('footer_view',$data);

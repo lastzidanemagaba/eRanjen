@@ -63,6 +63,7 @@ class Kartu extends BaseController
 
     public function nyoba(){
             $ran_id = $this->request->getPost('ran_id');
+            $mrj_id = $this->request->getPost('mrj_id');
             $act = $this->newencryptdata('replace'); //new or replace
 			$act = str_replace('=', '', $act);
 			$rid = $this->newencryptdata($ran_id);
@@ -129,6 +130,7 @@ class Kartu extends BaseController
             $id = 2;
             $data = array(
                 'kartu_tag_no' => $nospasi,
+                'kartu_ranjen_is' => $mrj_id,
                 'kartu_paired' => 1,
                 'kartu_paired_tgl' => date('Y-m-d H:i:s'),
             );

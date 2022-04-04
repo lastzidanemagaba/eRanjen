@@ -11,6 +11,8 @@ class SPBUModel extends Model
         $db = \Config\Database::connect();
         $builder = $this->db->table($this->tablespbu);
         if($id == false){
+            $builder->select('spbus.spbu_id,spbus.spbu_nama,spbus.spbu_kode,spbus.spbu_alamat,master_wilayah.mwil_nama');
+            $builder->join('master_wilayah', 'spbus.spbu_wilayah=master_wilayah.mwil_id','left');
             return $builder->get()->getResultArray();
         }else{
             return $builder->getWhere(['spbu_id' => $id]);

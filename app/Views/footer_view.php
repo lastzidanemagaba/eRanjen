@@ -180,9 +180,9 @@
         });
         $(document).on('click', '.btn-delete', function(){
             // get data from button edit
-            const id_spbu = $(this).data('id_spbu');
+            const spbu_id = $(this).data('spbu_id');
             // Set data to Form Edit
-            $('.id_spbu').val(id_spbu);
+            $('.spbu_id').val(spbu_id);
             // Call Modal Edit
             $('#deleteModalSPBU').modal('show');
         });

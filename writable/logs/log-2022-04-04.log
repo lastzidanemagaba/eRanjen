@@ -1,0 +1,77 @@
+CRITICAL - 2022-04-04 11:35:45 --> Undefined variable $kartu_ranjen_is
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_kartu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined varia...', 'D:\\xampp\\htdocs...', 53)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_kartu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\Kartu.php(17): view('view_kartu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\Kartu->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kartu))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-04 14:41:45 --> Undefined array key "spbu_kerjasama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_spbu.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_spbu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\SPBU.php(17): view('view_spbu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-04 14:42:56 --> Undefined array key "spbu_kerjasama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_spbu.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_spbu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\SPBU.php(17): view('view_spbu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-04 14:42:58 --> Undefined array key "spbu_kerjasama"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_spbu.php(36): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 36)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_spbu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\SPBU.php(17): view('view_spbu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-04 15:45:44 --> syntax error, unexpected token ";", expecting ")"
+#0 D:\xampp\htdocs\eRanjen\system\Router\Router.php(175): CodeIgniter\Router\Router->autoRoute('SPBU')
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(719): CodeIgniter\Router\Router->handle('SPBU')
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-04 16:03:35 --> You must set the database table to be used with your query.
+#0 D:\xampp\htdocs\eRanjen\system\Model.php(545): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\xampp\htdocs\eRanjen\system\Model.php(722): CodeIgniter\Model->builder()
+#2 D:\xampp\htdocs\eRanjen\app\Controllers\SPBU.php(14): CodeIgniter\Model->__call('tampil_wilayaht...', Array)
+#3 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#4 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-04 16:04:07 --> Class "App\Controllers\KendaraanModel" not found
+#0 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#1 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#2 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-04 16:43:11 --> Undefined array key "spbu_wilayah"
+#0 D:\xampp\htdocs\eRanjen\app\Views\view_spbu.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array...', 'D:\\xampp\\htdocs...', 34)
+#1 D:\xampp\htdocs\eRanjen\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\eRanjen\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\eRanjen\system\Common.php(1089): CodeIgniter\View\View->render('view_spbu', Array, true)
+#4 D:\xampp\htdocs\eRanjen\app\Controllers\SPBU.php(22): view('view_spbu', Array)
+#5 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(825): App\Controllers\SPBU->index()
+#6 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(412): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SPBU))
+#7 D:\xampp\htdocs\eRanjen\system\CodeIgniter.php(320): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\eRanjen\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
